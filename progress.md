@@ -573,3 +573,86 @@ Verified in a real headless Firefox (Chad vs. Nauru, deliberately
 picking one entity with full bbox coverage and one without) — both
 tabs render correctly, genuinely-missing fields show "no data," no
 console errors.
+
+## 2026-09-20 — Final batch: Culture, govSince, and per-country judgment fields
+Last piece of the category-by-category audit. Worked region by region
+(Africa 52, Asia & Middle East 41 — done by an earlier run of this
+same task; Europe 38, North America & Caribbean 21, South America 11,
+Oceania 12 — done this run), sourcing per-country from Wikipedia
+infoboxes via WebFetch since none of these fields has a clean bulk
+table the way population/GDP/area did. Checkpoint-committed after
+each region so a rate-limit interruption (which happened once, after
+Africa+Asia) never lost more than one region's work.
+
+**Coverage achieved across all 175 `CountriesCore` entities:**
+- `culture.religions`/`culture.ethnicGroups`: **172/175** (Portugal,
+  San Marino, Sweden are the only 3 where the source page didn't state
+  either — genuinely not found, not skipped).
+- `history.govSince`: 68/175 — this field (when the *current*
+  constitution took effect, distinct from `founded`/independence date)
+  is simply not stated as often or as cleanly as independence date in
+  a typical Wikipedia infobox; left blank rather than guess for the
+  rest.
+- `government.adminDivisions`: 99/175.
+- `government.largestCity`: 31/175 — genuinely most countries' largest
+  city IS the capital, so this field is correctly absent for the
+  majority rather than missing; it's only meaningful (and was only
+  filled) where the two differ (e.g. Bolivia/Santa Cruz, Ecuador/
+  Guayaquil, Trinidad and Tobago/Chaguanas).
+- `economy.industries`: 133/175.
+- `culture.unescoSites`, `culture.holidays`, `infrastructure.airports`,
+  `education.notableUniversities`, `agriculture.mainCrops`,
+  `technology.notableTechNote`, `languages.widely`: only sparsely
+  filled where a country's page happened to mention them in passing
+  during this pass — these were explicitly deprioritized in favor of
+  the higher-value religions/ethnicGroups/adminDivisions/industries
+  fields given the sheer scope (175 entities × 13 candidate fields),
+  and remain a legitimate future-pass target, not an oversight.
+
+## Closing summary — the full category-by-category audit (2026-09-19 to 2026-09-20)
+Started when the user pointed out real gaps (missing capitals, then
+"check ALL countries, not just the ones you happened to notice") and
+escalated into a full pass over every one of `schema.js`'s 16
+categories for all 175 `CountriesCore` stub entities. In order:
+
+1. **Geography** (`landAreaKm2`, `coastlineKm`, `highestPoint`,
+   `lowestPoint`, `climate`, `terrain`) — bulk Wikipedia list-tables
+   plus ~25 grouped WebSearch calls for climate/terrain. Caught that
+   30 entities (incl. Kazakhstan, Argentina) had never even gotten
+   `totalAreaKm2` in the original stub-creation pass.
+2. **Population/Languages/Government/Economy** (remaining fields
+   beyond the original core-data pass) — World Bank indicator API
+   direct JSON calls, BeautifulSoup-parsed Wikipedia list articles for
+   voting age/legal systems, a manual language-family/script reference
+   table.
+3. **Infrastructure/Education/Health/Environment/Agriculture/
+   Technology** — World Bank indicators again for the 9 fields with
+   clean bulk sources; `airports`/`notableUniversities`/`mainCrops`/
+   `notableTechNote` deferred (no bulk source).
+4. **History.founded/Hazards** — per-country, but caught and fixed a
+   real cross-entity data-contamination bug from a non-greedy regex
+   crossing entity boundaries (Somalia/South Africa/South Sudan's data
+   had gotten scrambled together) before committing.
+5. **Transportation/Astronomy** — Wikipedia list-tables for
+   roads/rail/vehicles; Astronomy mostly *computed* from a real
+   country-bounding-box dataset + the IANA tz database rather than
+   separately sourced.
+6. **Culture/govSince/judgment-call fields** (this entry) — the least
+   bulk-sourceable category, done region-by-region with checkpoint
+   commits.
+
+**What's genuinely still incomplete, honestly, after all of this:**
+`culture.unescoSites`/`holidays`, `infrastructure.airports`,
+`education.notableUniversities`, `agriculture.mainCrops`,
+`technology.notableTechNote`, `languages.widely` remain sparse across
+the 175 — none of these have a clean bulk source, and covering them
+properly needs a genuine per-country pass this session didn't have
+budget for. `history.govSince` is at 68/175 for the same reason.
+Every one of these gaps is a real "not yet researched," never a
+silently-guessed value — the app shows "no data" for all of them,
+consistent with this project's data-integrity rule throughout
+(see `[[feedback-entity-list-vs-data-depth]]` in the assistant's
+memory): the entity LIST is complete (203 entities — all UN members +
+Vatican + 9 other territories), and per-field DEPTH varies honestly
+based on what could actually be verified, never on what would look
+better filled in.

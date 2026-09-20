@@ -43,20 +43,18 @@ memory for the general rule this produced.
   ever added on purpose.
 - **The other 175 entities** (`CountriesCore` in `js/data/countries.js`)
   started 2026-09-19 as bare stubs (id/name/flag/kind only, every
-  category object empty `{}`), then got a first real-data pass the
-  same day: 9 core fields — total area, population, GDP nominal,
-  capital, official language(s), currency, government type, median
-  age, and (where sourced) life expectancy — filled in from Wikipedia
-  reference tables (population/UN, area, GDP/IMF, national capitals,
-  official languages, circulating currencies, median age/CIA,
-  government systems) fetched directly via WebFetch. The other 10
-  categories (culture, history beyond what's in
-  `history-timeline.js`, infrastructure, education, environment,
-  agriculture, transportation, technology, position on Earth, natural
-  hazards) are still empty `{}` for these 175 — a depth gap, not a
-  roster gap, and the app is fully defensive about it (every render
-  path uses optional chaining and shows "no data" rather than
-  crashing or guessing).
+  category object empty `{}`), then went through a full
+  category-by-category research pass across 2026-09-19–20 covering
+  **all 16 of `schema.js`'s categories**, not just the initial 9 core
+  fields — see progress.md's "Closing summary — the full
+  category-by-category audit" entry for the complete pass-by-pass
+  history and sourcing. Depth still genuinely varies per field (some
+  fields, like `culture.unescoSites` or `agriculture.mainCrops`, have
+  no clean bulk source and remain sparse), but every category has been
+  through a real research attempt, not left untouched. The app is
+  fully defensive about remaining gaps — every render path uses
+  optional chaining and shows "no data" rather than crashing or
+  guessing.
 - Life expectancy specifically could only be reliably sourced for
   ~96 of the 175 (WebFetch's extraction of the long Wikipedia table
   became unreliable past a certain point — a re-check caught it
