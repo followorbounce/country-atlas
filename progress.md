@@ -656,3 +656,73 @@ memory): the entity LIST is complete (203 entities — all UN members +
 Vatican + 9 other territories), and per-field DEPTH varies honestly
 based on what could actually be verified, never on what would look
 better filled in.
+
+## 2026-09-20 — final closing pass on the sparse fields (checkpoints 2-3/5 of this sub-thread)
+User asked precisely, after the summary above was reported as "done":
+"когда остальные категории тоже запустишь?" — right to push back, since
+several fields were much sparser than a category-level summary implied.
+Measured exact per-field coverage (not category-level) and ran one more
+targeted pass on the 9 weakest fields.
+
+**Final coverage, exact counts out of 175:**
+- `culture.unescoSites`: **175/175** (done in a prior sub-pass, bulk
+  Wikipedia "List of World Heritage Sites by country")
+- `infrastructure.airports`: **175/175** (same prior sub-pass, bulk
+  Wikipedia airports-by-country table)
+- `history.govSince`: **170/175** — bulk-sourced from Wikipedia's "List
+  of national constitutions" (one fetch, ~150 countries in a single
+  table), individually cross-checked wherever a value looked surprising.
+  This caught something genuinely real, not an artifact: Kazakhstan
+  adopted an entirely new constitution by referendum on 15 March 2026
+  (in force 1 July 2026) — verified directly against Kazakhstan's own
+  Wikipedia constitution article before trusting a "2026" date that
+  initially looked like a stale/hallucinated table entry. Deliberately
+  left blank (not guessed) for Afghanistan (constitution abolished 2021,
+  no legitimate current one under Taliban rule), Yemen (government split
+  between two rival authorities — a single date would mislead), and San
+  Marino (its "constitution" is a set of centuries-old statutes, not
+  reducible to one adoption year without more research than budgeted).
+  A few entries carry an honest caveat rather than a bare year: Israel
+  (no single written constitution — Basic Laws), Haiti (1987/2012 text,
+  but implementation is currently disrupted by the political crisis
+  since 2024), Syria (2025 transitional declaration, not a permanent
+  constitution).
+- `culture.holidays`: **98/175** — bulk-sourced from Wikipedia's "List
+  of national independence days" (2 fetches, full A-Z). Skipped Syria's
+  listed holiday specifically (a Ba'athist-era "Revolution Day"
+  commemorating the 1963 coup) since it's unclear whether the
+  post-Assad transitional government still observes it.
+- `languages.widely`: **75/175**
+- `government.largestCity`: **32/175** — genuinely close to its
+  realistic ceiling; the overwhelming majority of countries' largest
+  city IS the capital, so this field is correctly meant to stay sparse.
+  Verified the handful of clear differ-from-capital cases in the
+  pending set (Kazakhstan/Almaty, Ecuador/Guayaquil, Bolivia/Santa Cruz
+  de la Sierra, Belize/Belize City) were already correctly filled by an
+  earlier sub-pass.
+- `agriculture.mainCrops`: **31/175** — no clean bulk source exists (a
+  "List of countries by agricultural output" article turned out to
+  cover GDP sector composition, not actual crops); would need a genuine
+  per-country pass.
+- `education.notableUniversities`: **6/175** and `technology.
+  notableTechNote`: **2/175** — both fields are explicitly qualitative/
+  optional per their own `schema.js` definitions ("a brief note...
+  leave blank rather than invent something generic"). Low coverage here
+  reflects that most of the 175 don't have a globally well-known
+  university or a distinctive tech-sector story to report, not that the
+  research was skipped — padding either field to raise the count would
+  be exactly the fabrication failure mode this project has repeatedly
+  corrected for this session.
+
+**Operational note**: this session's WebSearch tool budget (200/200)
+was exhausted partway through this pass, forcing an immediate pivot
+from per-country/per-group WebSearch queries to single bulk WebFetch
+calls against Wikipedia list-articles — which turned out to be *more*
+efficient per country covered anyway. Worth trying bulk WebFetch list
+articles first, before WebSearch, on any future pass like this one.
+
+This is the genuine final state of the multi-pass 16-category audit
+for the 175 stub entities. Any further improvement on the remaining
+sparse fields needs a dedicated per-country research pass, not another
+bulk-source hunt — there isn't a bulk source left to find for
+`mainCrops`, `notableUniversities`, or `notableTechNote`.

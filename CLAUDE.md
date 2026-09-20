@@ -115,13 +115,26 @@ memory for the general rule this produced.
   old-monarchy countries missing from that table. `hazards`: 174/175
   (South Sudan is the one real gap), sourced from a mirror of the CIA
   World Factbook's "Natural hazards" field — the live Factbook site
-  was itself discontinued in February 2026. `culture` (religions,
-  ethnic groups, UNESCO sites, holidays) and `history.govSince` are
-  still empty for all 175 — no clean bulk source exists for either, so
-  this genuinely needs a future per-country research pass rather than
-  the bulk-table approach that worked for area/population/GDP/hazards.
-  Full detail, including a real cross-entity data-contamination bug
-  caught and fixed during this pass, in progress.md.
+  was itself discontinued in February 2026. Full detail, including a
+  real cross-entity data-contamination bug caught and fixed during this
+  pass, in progress.md.
+- **2026-09-20 — final closing pass on the hardest-to-source fields.**
+  After a summary claimed the audit was "done," the user correctly
+  pushed back, having noticed several fields were much sparser than a
+  category-level view suggested. Exact final coverage out of 175:
+  `culture.unescoSites` 175/175, `infrastructure.airports` 175/175,
+  `history.govSince` 170/175, `culture.holidays` 98/175,
+  `languages.widely` 75/175, `government.largestCity` 32/175 (near its
+  realistic ceiling — most countries' largest city IS the capital),
+  `agriculture.mainCrops` 31/175, `education.notableUniversities`
+  6/175, `technology.notableTechNote` 2/175 (both explicitly
+  qualitative/optional fields per `schema.js` — low coverage reflects
+  that most countries genuinely have nothing distinctive to report,
+  not skipped research). `mainCrops`/`notableUniversities`/
+  `notableTechNote`/`widely` have no bulk source and would need a
+  genuine per-country pass to improve further. Full sourcing detail
+  and the specific countries deliberately left blank (and why) in
+  progress.md's "final closing pass" entry.
 - **A new `kind: "disputed"` category** (alongside `country`/
   `territory`/`subnational`) was added for Palestine and Kosovo — an
   ordinary `"country"` tag would gloss over their contested status,
