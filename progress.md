@@ -95,6 +95,11 @@ calls rather than treating my own first-draft numbers as good enough:
   time). Live at https://followorbounce.github.io/country-atlas/,
   Cloudflare Web Analytics beacon confirmed present on the live page.
 
+- **2026-09-19 (same day) — Fixed a real layout bug + added a browse-all list.** User reported "the table drifts at the bottom" and asked for a way to select from a full country list, not just search.
+  - Root cause of the table bug: `.stat-val` had a blanket `white-space: nowrap`, which is fine for short numeric values but broke badly on long text fields (religions, ethnic groups, holidays — anything using the `pctlist`/`list` format) — long values overflowed past the page edge and got clipped/hidden, worst on mobile where whole rows looked blank. Fixed properly: `.stat-table` now uses `table-layout: fixed` with explicit column-width percentages (37/26/37) instead of `min-width`/`max-width` on individual cells, and `.stat-val` wraps normally. Confirmed via a real browser check that `document.body.scrollWidth` no longer exceeds the viewport at both 1400px and 390px widths, and that every value in the Culture category (the worst offender — long religion/ethnicity lists) renders in full, not truncated.
+  - Added a "browse all" option: a ☰ button next to each search box, plus focusing the empty search input, now shows all 25 entities grouped by kind (Countries / Territories & SARs / Subnational), alphabetized within each group — not a world map (still out of scope, needs real GeoJSON — see CLAUDE.md), but directly answers "I need a list of every option," which a search-only box doesn't surface on its own.
+  - Verified both fixes in a real headless Firefox before pushing, not just by re-reading the CSS.
+
 ## Next steps
 - The "Deliberately not built this pass" list in CLAUDE.md is the
   natural place to look for what to tackle next — the true map overlay

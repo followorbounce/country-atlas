@@ -80,11 +80,14 @@ meaningful corrections that were applied:
 - `js/viz/pyramid.js` — simplified 3-bracket (0-14/15-64/65+) mirrored
   bar chart. Explicitly not a true 5-year-band population pyramid —
   this dataset doesn't carry that granularity, and the UI says so.
-- `js/app.js` — wires everything: search/select for both sides,
-  category tab nav, data-driven stat-table rendering (with a
-  proportional compare-bar on every numeric row), the relative-scale
-  strip (area/population/GDP/density ratios, "A fits in B Nx"), the
-  History category's dual timeline, info popovers, theme toggle.
+- `js/app.js` — wires everything: search/select for both sides (plus a
+  ☰ "browse all" option — clicking it or focusing an empty search box
+  lists every entity grouped by kind: Countries / Territories & SARs /
+  Subnational), category tab nav, data-driven stat-table rendering
+  (with a proportional compare-bar on every numeric row), the
+  relative-scale strip (area/population/GDP/density ratios, "A fits in
+  B Nx"), the History category's dual timeline, info popovers, theme
+  toggle.
 
 ## Design
 "National Geographic / CIA World Factbook / Our World in Data / GIS"

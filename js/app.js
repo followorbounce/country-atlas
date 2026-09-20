@@ -145,25 +145,60 @@
     return "Moderate — recent-year estimate, not live data";
   }
 
-  /* ---------- Country panels + search ---------- */
+  /* ---------- Country panels + search / browse-all ---------- */
+  const KIND_LABELS = { country: "Countries", territory: "Territories & SARs", subnational: "Subnational (states)" };
+  const KIND_ORDER = ["country", "territory", "subnational"];
+
+  function renderGroupedList(results) {
+    const groups = KIND_ORDER.map((kind) => ({
+      kind,
+      label: KIND_LABELS[kind],
+      items: Countries.filter((c) => c.kind === kind).sort((x, y) => x.name.localeCompare(y.name)),
+    })).filter((g) => g.items.length);
+    results.innerHTML = groups.map((g) => `
+      <div class="results-group-label">${g.label}</div>
+      ${g.items.map((c) => `<button data-id="${c.id}"><span class="flag">${c.flag}</span>${c.name}<span class="kind">${c.kind}</span></button>`).join("")}
+    `).join("");
+    results.classList.add("open");
+  }
+
+  function renderFilteredList(results, q) {
+    const matches = Countries.filter((c) => c.name.toLowerCase().includes(q)).sort((x, y) => x.name.localeCompare(y.name));
+    results.innerHTML = matches.map((c) => `<button data-id="${c.id}"><span class="flag">${c.flag}</span>${c.name}<span class="kind">${c.kind}</span></button>`).join("") || `<div style="padding:10px;font-size:0.82rem;color:var(--ink-dim)">No matches</div>`;
+    results.classList.add("open");
+  }
+
   function buildPanel(side) {
     const panel = $(`#panel${side.toUpperCase()}`);
     panel.innerHTML = `
       <div class="panel-side-label">Side ${side.toUpperCase()}</div>
       <div class="search-box">
-        <input type="text" placeholder="Search countries, territories..." data-side="${side}">
+        <div class="search-row">
+          <input type="text" placeholder="Search or browse all ${Countries.length}..." data-side="${side}">
+          <button type="button" class="browse-btn" data-side="${side}" title="Browse full list">☰</button>
+        </div>
         <div class="search-results" data-side="${side}"></div>
       </div>
       <div class="country-card" data-side="${side}"></div>
     `;
     const input = panel.querySelector("input");
+    const browseBtn = panel.querySelector(".browse-btn");
     const results = panel.querySelector(".search-results");
+
     input.addEventListener("input", () => {
       const q = input.value.trim().toLowerCase();
-      if (!q) { results.classList.remove("open"); return; }
-      const matches = Countries.filter((c) => c.name.toLowerCase().includes(q)).slice(0, 8);
-      results.innerHTML = matches.map((c) => `<button data-id="${c.id}"><span class="flag">${c.flag}</span>${c.name}<span class="kind">${c.kind}</span></button>`).join("") || `<div style="padding:10px;font-size:0.82rem;color:var(--ink-dim)">No matches</div>`;
-      results.classList.add("open");
+      if (!q) { renderGroupedList(results); return; }
+      renderFilteredList(results, q);
+    });
+    input.addEventListener("focus", () => {
+      const q = input.value.trim().toLowerCase();
+      if (!q) renderGroupedList(results); else renderFilteredList(results, q);
+    });
+    browseBtn.addEventListener("mousedown", (e) => {
+      e.preventDefault();
+      input.value = "";
+      renderGroupedList(results);
+      input.focus();
     });
     input.addEventListener("blur", () => setTimeout(() => results.classList.remove("open"), 150));
     results.addEventListener("mousedown", (e) => {
