@@ -14,7 +14,10 @@
   let activeCategory = "geography";
 
   function density(entity) {
-    return entity.population.total / entity.geography.landAreaKm2;
+    const pop = entity.population?.total;
+    const land = entity.geography?.landAreaKm2 || entity.geography?.totalAreaKm2;
+    if (!pop || !land) return null;
+    return pop / land;
   }
 
   function fieldValue(entity, catKey, fieldKey) {
@@ -225,32 +228,50 @@
   function renderCard(side) {
     const entity = byId(side === "a" ? sideA : sideB);
     const card = document.querySelector(`.country-card[data-side="${side}"]`);
+    const capital = entity.government?.capital ?? "—";
+    const pop = entity.population?.total != null ? Format.num(entity.population.total) : "—";
+    const area = entity.geography?.totalAreaKm2 != null ? `${Format.num(entity.geography.totalAreaKm2)} km²` : "—";
+    const currency = entity.economy?.currency ?? "—";
     card.innerHTML = `
       <div class="flag-big">${entity.flag}</div>
       <div>
         <h2>${entity.name}</h2>
         <div class="kind-tag">${entity.kind}</div>
         <div class="basics">
-          <div><b>Capital:</b> ${entity.government.capital}</div>
-          <div><b>Population:</b> ${Format.num(entity.population.total)}</div>
-          <div><b>Area:</b> ${Format.num(entity.geography.totalAreaKm2)} km²</div>
-          <div><b>Currency:</b> ${entity.economy.currency}</div>
+          <div><b>Capital:</b> ${capital}</div>
+          <div><b>Population:</b> ${pop}</div>
+          <div><b>Area:</b> ${area}</div>
+          <div><b>Currency:</b> ${currency}</div>
         </div>
       </div>`;
   }
 
   /* ---------- Relative scale strip ---------- */
+  function safeRatio(x, y) {
+    if (typeof x !== "number" || typeof y !== "number" || !x || !y) return null;
+    return x / y;
+  }
   function renderScaleStrip() {
     const a = byId(sideA), b = byId(sideB);
-    const areaRatio = a.geography.totalAreaKm2 / b.geography.totalAreaKm2;
-    const popRatio = a.population.total / b.population.total;
-    const gdpRatio = a.economy.gdpNominalUSD / b.economy.gdpNominalUSD;
-    const densRatio = density(a) / density(b);
+    const areaA = a.geography?.totalAreaKm2, areaB = b.geography?.totalAreaKm2;
+    const popA = a.population?.total, popB = b.population?.total;
+    const gdpA = a.economy?.gdpNominalUSD, gdpB = b.economy?.gdpNominalUSD;
+    const densA = (popA && areaA) ? popA / (a.geography.landAreaKm2 || areaA) : null;
+    const densB = (popB && areaB) ? popB / (b.geography.landAreaKm2 || areaB) : null;
+
+    function ratioCard(label, x, y, nameA, nameB, verb) {
+      const r = safeRatio(x, y);
+      if (r == null) return { label, big: "Data not available for this comparison", pctA: 50 };
+      const big = r >= 1 ? `${nameA} ${verb.gte.replace("{n}", r.toFixed(1))}` : `${nameB} ${verb.lt.replace("{n}", (1 / r).toFixed(1))}`;
+      const pctA = (x / (x + y)) * 100;
+      return { label, big, pctA };
+    }
+
     const items = [
-      { label: "Area", big: areaRatio >= 1 ? `${a.name} fits ${b.name} ${areaRatio.toFixed(1)}×` : `${b.name} fits ${a.name} ${(1 / areaRatio).toFixed(1)}×`, pctA: areaRatio >= 1 ? (areaRatio / (areaRatio + 1)) * 100 : (1 / (1 / areaRatio + 1)) * 100 },
-      { label: "Population", big: `${popRatio >= 1 ? popRatio.toFixed(1) + "× more" : (1 / popRatio).toFixed(1) + "× fewer"} people in ${a.name}`, pctA: (a.population.total / (a.population.total + b.population.total)) * 100 },
-      { label: "GDP (nominal)", big: `${gdpRatio >= 1 ? gdpRatio.toFixed(1) + "× larger" : (1 / gdpRatio).toFixed(1) + "× smaller"} economy: ${a.name}`, pctA: (a.economy.gdpNominalUSD / (a.economy.gdpNominalUSD + b.economy.gdpNominalUSD)) * 100 },
-      { label: "Population density", big: `${a.name} is ${densRatio >= 1 ? densRatio.toFixed(1) + "× denser" : (1 / densRatio).toFixed(1) + "× less dense"}`, pctA: (density(a) / (density(a) + density(b))) * 100 },
+      ratioCard("Area", areaA, areaB, a.name, b.name, { gte: `fits ${b.name} {n}×`, lt: `fits ${a.name} {n}×` }),
+      ratioCard("Population", popA, popB, a.name, b.name, { gte: `has {n}× more people than ${b.name}`, lt: `has {n}× fewer people than ${b.name}` }),
+      ratioCard("GDP (nominal)", gdpA, gdpB, a.name, b.name, { gte: `has a {n}× larger economy than ${b.name}`, lt: `has a {n}× smaller economy than ${b.name}` }),
+      ratioCard("Population density", densA, densB, a.name, b.name, { gte: `is {n}× denser than ${b.name}`, lt: `is {n}× less dense than ${b.name}` }),
     ];
     $("#scaleStrip").innerHTML = items.map((i) => `
       <div class="scale-card">
@@ -299,20 +320,25 @@
     PyramidViz.render($("#pyramidChart"), a, b, `${a.flag} ${a.name}`, `${b.flag} ${b.name}`);
     renderGrowth();
 
-    const areaRatio = a.geography.totalAreaKm2 / b.geography.totalAreaKm2;
-    $("#relativeScaleBody").innerHTML = `
-      <p style="font-size:0.9rem;margin:0 0 10px">
-        <b style="color:var(--side-a)">${a.name}</b> (${Format.num(a.geography.totalAreaKm2)} km²) is
-        <b>${(areaRatio >= 1 ? areaRatio : 1 / areaRatio).toFixed(2)}×</b>
-        the ${areaRatio >= 1 ? "size of" : "size of (i.e. smaller than)"}
-        <b style="color:var(--side-b)">${b.name}</b> (${Format.num(b.geography.totalAreaKm2)} km²).
-      </p>
-      <div class="scale-bar" style="height:22px">
-        <div class="a" style="width:${(a.geography.totalAreaKm2 / (a.geography.totalAreaKm2 + b.geography.totalAreaKm2)) * 100}%"></div>
-        <div class="b" style="width:${(b.geography.totalAreaKm2 / (a.geography.totalAreaKm2 + b.geography.totalAreaKm2)) * 100}%"></div>
-      </div>
-      <p class="viz-caption">Bar widths are proportional to total area — a schematic size comparison, not a true equal-area map projection.</p>
-    `;
+    const areaA = a.geography?.totalAreaKm2, areaB = b.geography?.totalAreaKm2;
+    if (areaA && areaB) {
+      const areaRatio = areaA / areaB;
+      $("#relativeScaleBody").innerHTML = `
+        <p style="font-size:0.9rem;margin:0 0 10px">
+          <b style="color:var(--side-a)">${a.name}</b> (${Format.num(areaA)} km²) is
+          <b>${(areaRatio >= 1 ? areaRatio : 1 / areaRatio).toFixed(2)}×</b>
+          the ${areaRatio >= 1 ? "size of" : "size of (i.e. smaller than)"}
+          <b style="color:var(--side-b)">${b.name}</b> (${Format.num(areaB)} km²).
+        </p>
+        <div class="scale-bar" style="height:22px">
+          <div class="a" style="width:${(areaA / (areaA + areaB)) * 100}%"></div>
+          <div class="b" style="width:${(areaB / (areaA + areaB)) * 100}%"></div>
+        </div>
+        <p class="viz-caption">Bar widths are proportional to total area — a schematic size comparison, not a true equal-area map projection.</p>
+      `;
+    } else {
+      $("#relativeScaleBody").innerHTML = `<p class="stat-na">Area data not available for one or both selections.</p>`;
+    }
   }
 
   /* ---------- Theme ---------- */
@@ -339,7 +365,7 @@
 
   /* ---------- Scope note ---------- */
   function renderScopeNote() {
-    $("#scopeNote").innerHTML = `This atlas covers <b>${Countries.length} hand-curated entities</b> (not the full ~200 countries/territories worldwide) across a focused set of fields per category — chosen to keep every figure honestly sourced rather than padded with unverifiable numbers. See the project's own documentation for the full scope note and what was deliberately left out.`;
+    $("#scopeNote").innerHTML = `This atlas covers <b>${Countries.length} entities</b> — every UN member state plus the Holy See and a set of major territories/disputed regions. Depth varies: a curated set has full profiles across all 16 categories, verified against primary sources; the rest have core fields filled in as a research pass verifies them, and show "no data" rather than a guessed number for anything not yet confirmed. See the project's own documentation for exactly which entities have full depth today.`;
   }
 
   /* ---------- Orchestration ---------- */

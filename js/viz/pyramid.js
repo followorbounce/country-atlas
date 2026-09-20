@@ -22,7 +22,7 @@ const PyramidViz = (() => {
     const colorA = styles.getPropertyValue("--side-a").trim() || "#0b6e73";
     const colorB = styles.getPropertyValue("--side-b").trim() || "#c97c4b";
 
-    const dA = entityA.population.ageDist, dB = entityB.population.ageDist;
+    const dA = entityA.population?.ageDist, dB = entityB.population?.ageDist;
 
     BRACKETS.forEach((b, i) => {
       const y = top + i * rowH;
