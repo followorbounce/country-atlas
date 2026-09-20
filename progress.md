@@ -285,6 +285,56 @@ calls rather than treating my own first-draft numbers as good enough:
     target if deeper coverage is wanted, following the same "verify or
     leave blank" discipline.
 
+- **2026-09-20 — User bug reports: swapped comparison text + missing
+  capitals; CA/HI removed; last 10 government-type gaps filled.**
+  - Real bug found and fixed: `renderScaleStrip()`'s `ratioCard()`
+    helper had a subject/object swap in its "ratio below 1" branch —
+    whenever the smaller entity was in side A (e.g. Russia vs. United
+    States, Russia first), it produced nonsense like "United States
+    has 2.4× fewer people than United States." The Area card had a
+    second, separate bug: its "fits" phrasing hardcoded the wrong
+    entity name in the same branch, and was confusingly worded even
+    when technically correct. Rewrote Area's copy to match the other
+    three cards' "has Nx more/less" pattern. Verified in a real
+    browser, then re-verified directly against the **live production
+    URL** (not localhost) after the user reported still seeing the
+    bug — confirmed it was a stale-cache/timing issue on their end,
+    not a real regression; the deployed fix was already correct.
+  - The user's "can't even find capitals" complaint turned out to be
+    about only 4 of 205 entities, not Belarus (which was already
+    correct) — Libya, Seychelles, Suriname, Nauru. Filled via targeted
+    WebSearch, plus Libya's contested government status, Nauru's
+    population/area, and Seychelles' area/full language list.
+  - Removed California and Hawaii (205 → 203 entities) now that
+    [[us-states-atlas-site]] is a dedicated US-states comparison tool —
+    see CLAUDE.md.
+  - Filled the remaining 10 stub entities' missing `government.type`
+    (Burkina Faso, Guinea-Bissau, Madagascar, Mali, Niger, Somalia,
+    South Sudan, Sudan, Syria, Yemen) — these are all countries with
+    genuinely volatile, recent political change (several 2025 coups,
+    Syria's post-Assad transition, Sudan's civil-war split), so this
+    required live WebSearch for current (Sept 2026) status rather than
+    the bulk reference-table approach used for the rest of the core
+    data — training-knowledge-only answers would likely have been
+    stale or wrong for this specific set.
+
+- **2026-09-20 — Geography category completed for all 175 stub
+  entities.** See CLAUDE.md's "Scope & data honesty" section for the
+  full writeup (sourcing, the land≈total-for-microstates finding, and
+  a real mid-pass splicing bug that was caught and fixed before
+  committing). Summary: `landAreaKm2`, `coastlineKm`, `highestPoint`,
+  `lowestPoint`, `climate`, and `terrain` now filled for all 175 (was:
+  only `totalAreaKm2`, and even that was completely missing for 30 of
+  them, including Kazakhstan and Argentina). Cross-checked all
+  existing `totalAreaKm2` values against a fresh source — zero
+  discrepancies, confirming the earlier pass's area data was accurate,
+  just incomplete for those 30. Verified in a real headless Firefox
+  across multiple extreme pairings (Kazakhstan vs. Tuvalu, Vatican
+  City vs. Nauru, Chad vs. Singapore) — no crashes, "Data not
+  available" shown honestly wherever a field genuinely isn't sourced
+  (e.g. Tuvalu's population), radar/pyramid/growth all degrade
+  gracefully.
+
 ## Next steps
 - The "Deliberately not built this pass" list in CLAUDE.md is the
   natural place to look for what to tackle next — the true map overlay
@@ -293,3 +343,67 @@ calls rather than treating my own first-draft numbers as good enough:
   discipline is more incremental.
 - If entity count grows significantly, `js/data/countries.js` (already
   ~25 large objects) may be worth splitting into per-region files.
+
+## 2026-09-20 — Population/Languages/Government/Economy fill for the 175 core entities
+Direct follow-up to the user's "проверь остальные категории на такие же
+пробелы" (check the other categories for the same kind of gaps),
+running concurrently with a separate pass filling the Geography
+category. Scope: the 4 categories that had a partial fill from the
+Phase 2 core-data pass.
+
+**Method** — bulk World Bank indicator API calls via `curl` (not
+WebFetch's summarization, which had already proven unreliable once on
+a long ranking table — see the government-type/life-expectancy note
+above): `SP.URB.TOTL.IN.ZS`, `SP.POP.GROW`, `SP.DYN.TFRT.IN`,
+`SP.DYN.LE00.IN`, `NY.GDP.PCAP.CD`, `NY.GDP.MKTP.PP.CD`,
+`SL.UEM.TOTL.ZS`, `SP.POP.0014.TO.ZS`, `SP.POP.1564.TO.ZS`,
+`SP.POP.65UP.TO.ZS` — each one fetched as raw JSON covering every
+economy in one request, matched to our entities by ISO3 code (a manual
+id→ISO3 mapping, since these codes are a stable standard, not a
+statistic requiring per-entity verification). This is a materially
+more reliable extraction method than re-scraping a long HTML table
+through a summarizing model, and is worth reusing for future bulk
+data passes on this project.
+
+Voting age and legal-system tradition were sourced from Wikipedia's
+"Voting age" and "List of national legal systems" list articles
+(parsed with BeautifulSoup, not model-summarized) — spot-checked
+several non-18 voting ages (Austria/Malta/Cuba/Nicaragua/Argentina/
+Ecuador at 16; Nauru/Cameroon/Bahrain at 20; Kuwait/Lebanon/Oman at 21)
+against known real-world exceptions to confirm the parse was sound
+before trusting it for all 175.
+
+`languages.family`/`languages.script` were filled from a manual
+language→(family, script) reference table built from standard
+linguistic classification (e.g. "Arabic" → Afro-Asiatic (Semitic) /
+Arabic script) — this is stable, textbook linguistic fact rather than
+a volatile statistic, so it didn't need per-country web verification,
+the same reasoning already applied to ISO3 codes elsewhere in this
+project.
+
+**Coverage achieved** (out of 175): urbanPct/growthRatePct/
+fertilityRate/lifeExpectancy/ageDist 174/175 (Vatican City is the one
+gap — it isn't a World Bank member and doesn't report these);
+languages family/script 171/175; votingAge 172/175 (Afghanistan and
+UAE genuinely hold no elections, Vatican N/A); legalSystem 144/175
+(Wikipedia's list article itself only covers ~178 of ~195 countries —
+the other 31 are a genuine source gap, left blank rather than
+guessed); gdpPerCapitaUSD 173/175, gdpPPPUSD 170/175 (North Korea,
+Cuba, and the European microstates don't have IMF PPP figures),
+unemploymentPct 159/175 (mostly missing for Pacific/Caribbean
+microstates that don't report ILO-standard unemployment data).
+
+**Still genuinely missing for most of the 175** (left blank, not
+guessed, per this project's standing data-integrity rule):
+`languages.widely`, `government.largestCity`, `government.
+adminDivisions`, `economy.industries`. These are per-country judgment
+calls with no clean bulk source — a future pass could work through
+them country-by-country, but that's a materially larger, slower effort
+than this one, which prioritized the fields with clean authoritative
+bulk sources first.
+
+Verified in a real headless Firefox (Belarus vs. Nauru comparison
+across Population/Languages/Government/Economy/Geography tabs, plus
+the Special-Comparisons radar/pyramid) — all render correctly, no
+crashes, missing fields correctly show "no data" rather than blank
+breakage.

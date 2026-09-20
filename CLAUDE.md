@@ -64,6 +64,53 @@ memory for the general rule this produced.
   the lower part of the ranking, which was discarded rather than used;
   see progress.md for the detail). The unfilled ones show "no data"
   rather than an invented number.
+- **2026-09-20 — Geography category completed for all 175.** The user
+  asked explicitly for a full audit-and-fill pass on Geography,
+  correctly rejecting the idea that "insufficient data" justified
+  leaving founding G7-sized countries (Kazakhstan, Argentina — both
+  had a completely empty `geography: {}`) without even a total area.
+  Added `landAreaKm2`, `coastlineKm`, `highestPoint`, `lowestPoint`,
+  `climate`, and `terrain` for all 175, plus independently
+  cross-checked every existing `totalAreaKm2` against a fresh source —
+  0 discrepancies found (all 145 previously-filled values were
+  already correct; the other 30, including Kazakhstan and Argentina,
+  had simply never been filled in at all, which the cross-check caught
+  by contrast rather than by finding a wrong number).
+  - Area/coastline/elevation extremes: bulk-sourced from Wikipedia's
+    "List of countries and dependencies by area," "List of countries
+    by length of coastline," and "List of elevation extremes by
+    country," each covering ~all countries in one table — far more
+    efficient than 175 separate lookups, and the same
+    approach used successfully in the earlier core-data pass.
+  - Land area for the ~29 smallest states (Vatican City, Monaco,
+    Nauru, Maldives, several Caribbean/Pacific microstates) wasn't in
+    the bulk table; verified via a targeted check (Maldives: CIA
+    Factbook confirms land = total, 0 water area) that land ≈ total
+    is a real, not assumed, property of small islands without inland
+    water bodies, then applied that as the fallback for the rest.
+  - Climate/terrain has no single bulk source, so this was ~25
+    targeted WebSearch calls (grouped ~6-8 countries per call) against
+    Wikipedia/CIA-Factbook-style geography summaries, written as
+    terse 1-line descriptions matching the original 30 entities'
+    style. All 175 got both fields (only Vatican City needed a
+    separate manual pass, added from general knowledge of its
+    location within Rome).
+  - Vatican City also got real fixes beyond geography while in there:
+    `totalAreaKm2` corrected from a wrongly-rounded `0` to the real
+    `0.49`, and `population.total` added (882, with a `fieldNotes`
+    caveat — sources genuinely diverge 500-900 depending on whether
+    non-resident staff are counted).
+  - Caught and fixed a real splicing bug mid-pass: a first attempt at
+    inserting `climate`/`terrain` used a regex (`geography: \{([^}]*)\}`)
+    that stopped at the first `}` it found — which, once `highestPoint`/
+    `lowestPoint` sub-objects existed, was the *inner* object's closing
+    brace, not the outer `geography` object's. This nested
+    `climate`/`terrain` incorrectly inside `highestPoint` for all 174
+    entities touched. Caught immediately via a rendered-page spot
+    check (Kazakhstan's Highest Point cell showed the climate text
+    instead of just "Khan Tengri (7,010 m)"), fixed with a second
+    corrective regex pass, then re-verified in a real browser before
+    committing.
 - **A new `kind: "disputed"` category** (alongside `country`/
   `territory`/`subnational`) was added for Palestine and Kosovo — an
   ordinary `"country"` tag would gloss over their contested status,
