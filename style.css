@@ -270,6 +270,7 @@ body {
 .legend-row .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; }
 .legend-row .a .dot { background: var(--side-a); }
 .legend-row .b .dot { background: var(--side-b); }
+.growth-controls { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-bottom: 12px; }
 
 /* ---------- Timeline (history category) ---------- */
 .dual-timeline { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }

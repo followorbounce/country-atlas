@@ -100,6 +100,35 @@ compare bar, radar polygon, and timeline column uses this same
 two-color language consistently. `Archivo` (display/headings),
 `Source Sans 3` (body), `Space Mono` (data/figures), all Google Fonts.
 
+## Time-series (Growth Over Time)
+Added 2026-09-19, the first thing built after the initial ship: a line
+chart (`js/viz/growth.js`, rendered in the Special Comparisons section)
+covering the "Timeline Comparison: population growth, GDP growth"
+feature from the original brief, which the first pass had left out
+entirely.
+
+- `js/data/timeseries.js` — population at 1960/1970/1980/1990/2000/
+  2010/2020 (7 points) and GDP nominal current-USD at 1990/2000/2010/
+  2020 (4 points), for all 25 entities. Sourced via a research pass
+  that pulled directly from the World Bank Open Data API
+  (`SP.POP.TOTL` / `NY.GDP.MKTP.CD`) for the 22 entities the World
+  Bank tracks, plus targeted web research for Taiwan, California, and
+  Hawaii (not World Bank members/series). Full sourcing notes,
+  including real definitional caveats the research surfaced rather
+  than smoothed over (Germany's series being consistently
+  reunified-territory-equivalent throughout vs. Russia's RSFSR→Russian
+  Federation continuity, California/Hawaii's Census-count vs.
+  World-Bank-midyear-estimate offset, a BEA SIC→NAICS methodology
+  break at 1997 affecting the two states' GDP), live as comments at
+  the top of `timeseries.js` and in progress.md.
+- Chart defaults to an **indexed** view (each entity's first available
+  year = 100) rather than absolute values — plotting Greenland's
+  ~56,000 people on the same linear axis as India's 1.4 billion would
+  make the smaller entity's whole trajectory invisible. An "Absolute"
+  toggle is available for when the actual scale is what matters. Every
+  point has a hover tooltip with the real value.
+- Population and GDP are separate toggleable metrics, not shown at once.
+
 ## Deliberately not built this pass
 - **Interactive map / true equal-area overlay tool** — the brief's Map
   Overlay Tool (drag-transparency country-shape overlay without

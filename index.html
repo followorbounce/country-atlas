@@ -71,6 +71,25 @@
           <svg id="pyramidChart" viewBox="0 0 340 220"></svg>
           <p class="viz-caption">Approximate share aged 0–14 / 15–64 / 65+. A simplification of a true 5-year-band population pyramid, which this dataset doesn't carry.</p>
         </div>
+        <div class="viz-card" style="grid-column: 1 / -1">
+          <h3>Growth Over Time</h3>
+          <div class="growth-controls">
+            <div class="chip-row" id="growthMetricChips" style="margin-bottom:0">
+              <button class="chip active" data-metric="population">Population</button>
+              <button class="chip" data-metric="gdpNominalUSD">GDP (nominal)</button>
+            </div>
+            <div class="chip-row" id="growthModeChips" style="margin-bottom:0">
+              <button class="chip active" data-mode="indexed">Indexed (first year = 100)</button>
+              <button class="chip" data-mode="absolute">Absolute</button>
+            </div>
+          </div>
+          <svg id="growthChart" viewBox="0 0 480 260"></svg>
+          <div class="legend-row">
+            <span class="a"><span class="dot"></span><span id="growthLabelA"></span></span>
+            <span class="b"><span class="dot"></span><span id="growthLabelB"></span></span>
+          </div>
+          <p class="viz-caption" id="growthCaption">Indexed view: each line starts at 100 in its first available year, so trajectories are comparable regardless of the two entities' very different absolute scale. Hover a point for the actual value. Some entities/years have no data (border or currency-history reasons) and are simply skipped, not estimated.</p>
+        </div>
       </div>
     </section>
   </div>
@@ -92,9 +111,11 @@
 <script src="js/data/schema.js"></script>
 <script src="js/data/countries.js"></script>
 <script src="js/data/history-timeline.js"></script>
+<script src="js/data/timeseries.js"></script>
 <script src="js/format.js"></script>
 <script src="js/viz/radar.js"></script>
 <script src="js/viz/pyramid.js"></script>
+<script src="js/viz/growth.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

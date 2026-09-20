@@ -100,6 +100,49 @@ calls rather than treating my own first-draft numbers as good enough:
   - Added a "browse all" option: a ☰ button next to each search box, plus focusing the empty search input, now shows all 25 entities grouped by kind (Countries / Territories & SARs / Subnational), alphabetized within each group — not a world map (still out of scope, needs real GeoJSON — see CLAUDE.md), but directly answers "I need a list of every option," which a search-only box doesn't surface on its own.
   - Verified both fixes in a real headless Firefox before pushing, not just by re-reading the CSS.
 
+- **2026-09-19 (same day) — Added the Growth Over Time chart.** User
+  asked what data would be worth adding next; recommended time-series
+  (population/GDP growth) over more entities, since it was the one
+  entirely-missing *capability* from the brief rather than just
+  missing numbers, and the user picked it.
+  - Built `js/viz/growth.js` first, with placeholder Japan/South
+    Korea-only data, to get the chart mechanics (indexed vs. absolute
+    mode, metric toggle, hover tooltips, SVG line rendering) right and
+    browser-tested before spending the research budget — this way a
+    chart-logic bug wouldn't be mixed up with a data bug during
+    verification. Caught and fixed two real issues at this stage: a
+    stray `padR: undefined` typo left over from editing (syntax
+    error), and a `formatCompact()` gap that rendered trillions as
+    "3100.0B" instead of "$3.10T" plus lowercased "GDP" to "gdp" in a
+    caption via an overzealous `.toLowerCase()` call.
+  - In parallel, forked a research agent to get real historical
+    population (1960-2020, 7 points) and GDP nominal (1990-2020, 4
+    points) for all 25 entities. It pulled most of it directly from
+    the World Bank Open Data API rather than search-scraping — a
+    stronger sourcing method than the previous two research passes
+    used, since it's hitting a structured data API instead of
+    interpreting search results. It also proactively surfaced real
+    definitional issues without being asked to smooth them over
+    (Germany's reunified-equivalent series, Russia's RSFSR/Federation
+    continuity, a BEA SIC→NAICS break affecting California/Hawaii's
+    GDP) — all preserved as comments in `timeseries.js`, not
+    discarded.
+  - Replaced the placeholder with the full verified dataset, then
+    **re-verified in the browser again** — and caught a real bug in my
+    own *test script*, not the app: I'd used `element.click()` via
+    `execute_script`, which only fires a synthetic "click" event, but
+    the app's selection dropdown listens for "mousedown" (a deliberate
+    choice from the original build, to fire before the input's `blur`
+    handler closes the dropdown). The test was silently doing nothing
+    while I read stale default-selection data and almost concluded
+    "Iceland has no data" incorrectly. Fixed by dispatching a real
+    `MouseEvent('mousedown', {bubbles:true})` instead, matching the
+    pattern already used successfully in the earlier browse-all-button
+    test — then confirmed correct data for Germany/Russia,
+    Taiwan/Hong Kong, and California/Greenland pairs by checking the
+    actual rendered first/last point values against the source data by
+    hand.
+
 ## Next steps
 - The "Deliberately not built this pass" list in CLAUDE.md is the
   natural place to look for what to tackle next — the true map overlay

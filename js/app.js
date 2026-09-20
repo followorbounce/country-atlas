@@ -254,6 +254,36 @@
       </div>`).join("");
   }
 
+  /* ---------- Growth over time ---------- */
+  let growthMetric = "population";
+  let growthMode = "indexed";
+  function renderGrowth() {
+    const a = byId(sideA), b = byId(sideB);
+    GrowthViz.render($("#growthChart"), a, b, growthMetric, growthMode);
+    $("#growthLabelA").textContent = `${a.flag} ${a.name}`;
+    $("#growthLabelB").textContent = `${b.flag} ${b.name}`;
+    const metricLabel = growthMetric === "population" ? "population" : "GDP (nominal)";
+    $("#growthCaption").textContent = growthMode === "indexed"
+      ? `Indexed view: each line starts at 100 in its first available year, so ${metricLabel} trajectories are comparable regardless of the two entities' very different absolute scale. Hover a point for the actual value. Some entities/years have no data (border or currency-history reasons) and are simply skipped, not estimated.`
+      : `Absolute ${metricLabel} values. Hover a point for the exact figure. Some entities/years have no data and are simply skipped, not estimated.`;
+  }
+  function initGrowthControls() {
+    $("#growthMetricChips").addEventListener("click", (e) => {
+      const btn = e.target.closest("button[data-metric]");
+      if (!btn) return;
+      growthMetric = btn.dataset.metric;
+      $$("#growthMetricChips .chip").forEach((c) => c.classList.toggle("active", c === btn));
+      renderGrowth();
+    });
+    $("#growthModeChips").addEventListener("click", (e) => {
+      const btn = e.target.closest("button[data-mode]");
+      if (!btn) return;
+      growthMode = btn.dataset.mode;
+      $$("#growthModeChips .chip").forEach((c) => c.classList.toggle("active", c === btn));
+      renderGrowth();
+    });
+  }
+
   /* ---------- Special viz ---------- */
   function renderSpecial() {
     const a = byId(sideA), b = byId(sideB);
@@ -261,6 +291,7 @@
     $("#radarLabelA").textContent = `${a.flag} ${a.name}`;
     $("#radarLabelB").textContent = `${b.flag} ${b.name}`;
     PyramidViz.render($("#pyramidChart"), a, b, `${a.flag} ${a.name}`, `${b.flag} ${b.name}`);
+    renderGrowth();
 
     const areaRatio = a.geography.totalAreaKm2 / b.geography.totalAreaKm2;
     $("#relativeScaleBody").innerHTML = `
@@ -319,6 +350,7 @@
     buildPanel("a"); buildPanel("b");
     initTheme();
     initPopoverClose();
+    initGrowthControls();
     renderScopeNote();
     setActiveCategory(activeCategory);
     renderAll();
