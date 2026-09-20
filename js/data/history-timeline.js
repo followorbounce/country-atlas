@@ -133,17 +133,6 @@ const HistoryTimelines = {
     { year: "1898", text: "Ceded to the United States after the Spanish-American War." },
     { year: "1952", text: "Commonwealth (Estado Libre Asociado) status established." },
   ],
-  california: [
-    { year: "1769", text: "First Spanish mission established at San Diego." },
-    { year: "1848", text: "Ceded to the U.S. after the Mexican-American War; Gold Rush begins soon after." },
-    { year: "1850", text: "Admitted as the 31st U.S. state." },
-  ],
-  hawaii: [
-    { year: "1795", text: "Kamehameha I unifies the Hawaiian Islands." },
-    { year: "1893", text: "Overthrow of the Kingdom of Hawaii." },
-    { year: "1898", text: "Annexed by the United States." },
-    { year: "1959", text: "Admitted as the 50th U.S. state." },
-  ],
   palestine: [
     { year: "1948", text: "Following the Arab-Israeli War, the West Bank comes under Jordanian administration and the Gaza Strip under Egyptian administration." },
     { year: "1967", text: "Six-Day War — Israel occupies the West Bank (including East Jerusalem) and the Gaza Strip." },

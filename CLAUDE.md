@@ -22,15 +22,25 @@ complete. Depth of data, not the roster, is the axis that legitimately
 varies. See `[[feedback-entity-list-vs-data-depth]]` in the assistant's
 memory for the general rule this produced.
 
-- **205 entities**: every UN member state (193) + the Holy See +
-  11 additional territories/disputed regions researched earlier
-  (Greenland, Puerto Rico, California, Hawaii, Taiwan, Hong Kong,
-  Palestine, Kosovo, Faroe Islands, French Polynesia, New Caledonia).
-  The original 30 hand-curated entities (Japan, South Korea, China,
-  India, United States, Germany, Brazil, Russia, Australia, Canada,
-  Iceland, Singapore, United Kingdom, France, Nigeria, Egypt,
-  Indonesia, Switzerland, New Zealand, and the 11 above) still have
-  the fullest, most-verified profiles across all 16 categories.
+- **203 entities**: every UN member state (193) + the Holy See +
+  9 additional territories/disputed regions researched earlier
+  (Greenland, Puerto Rico, Taiwan, Hong Kong, Palestine, Kosovo,
+  Faroe Islands, French Polynesia, New Caledonia). The original 30
+  hand-curated entities (Japan, South Korea, China, India, United
+  States, Germany, Brazil, Russia, Australia, Canada, Iceland,
+  Singapore, United Kingdom, France, Nigeria, Egypt, Indonesia,
+  Switzerland, New Zealand, and the 9 above) still have the fullest,
+  most-verified profiles across all 16 categories.
+- **California and Hawaii were removed 2026-09-19** (they were the
+  `kind: "subnational"` pair, present so early demo comparisons like
+  "Hawaii vs. Iceland" worked). Once the sibling
+  [[us-states-atlas-site]] shipped as a dedicated US-states comparison
+  tool, keeping 2 of 50 states mixed into a *country* atlas was
+  confusing scope creep rather than useful coverage — the user flagged
+  this directly. Removed from `countries.js`, `history-timeline.js`,
+  and `timeseries.js`; `kind: "subnational"` is currently unused but
+  left in the schema in case a genuinely complete subnational layer is
+  ever added on purpose.
 - **The other 175 entities** (`CountriesCore` in `js/data/countries.js`)
   started 2026-09-19 as bare stubs (id/name/flag/kind only, every
   category object empty `{}`), then got a first real-data pass the
