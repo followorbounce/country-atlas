@@ -262,13 +262,13 @@
     function ratioCard(label, x, y, nameA, nameB, verb) {
       const r = safeRatio(x, y);
       if (r == null) return { label, big: "Data not available for this comparison", pctA: 50 };
-      const big = r >= 1 ? `${nameA} ${verb.gte.replace("{n}", r.toFixed(1))}` : `${nameB} ${verb.lt.replace("{n}", (1 / r).toFixed(1))}`;
+      const big = r >= 1 ? `${nameA} ${verb.gte.replace("{n}", r.toFixed(1))}` : `${nameA} ${verb.lt.replace("{n}", (1 / r).toFixed(1))}`;
       const pctA = (x / (x + y)) * 100;
       return { label, big, pctA };
     }
 
     const items = [
-      ratioCard("Area", areaA, areaB, a.name, b.name, { gte: `fits ${b.name} {n}×`, lt: `fits ${a.name} {n}×` }),
+      ratioCard("Area", areaA, areaB, a.name, b.name, { gte: `has {n}× the land area of ${b.name}`, lt: `has {n}× less land area than ${b.name}` }),
       ratioCard("Population", popA, popB, a.name, b.name, { gte: `has {n}× more people than ${b.name}`, lt: `has {n}× fewer people than ${b.name}` }),
       ratioCard("GDP (nominal)", gdpA, gdpB, a.name, b.name, { gte: `has a {n}× larger economy than ${b.name}`, lt: `has a {n}× smaller economy than ${b.name}` }),
       ratioCard("Population density", densA, densB, a.name, b.name, { gte: `is {n}× denser than ${b.name}`, lt: `is {n}× less dense than ${b.name}` }),
