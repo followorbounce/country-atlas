@@ -407,3 +407,37 @@ across Population/Languages/Government/Economy/Geography tabs, plus
 the Special-Comparisons radar/pyramid) — all render correctly, no
 crashes, missing fields correctly show "no data" rather than blank
 breakage.
+
+## 2026-09-20 — Infrastructure/Education/Health/Environment/Agriculture/Technology fill
+Continuing the same category-by-category audit-and-fill pass. Sourced
+via the World Bank indicator API directly (raw JSON via curl, not
+WebFetch's summarizing model — the most reliable approach found this
+session) for the 9 fields with clean bulk indicators:
+`IT.NET.USER.ZS` (internet penetration/users), `IT.CEL.SETS.P2`
+(mobile subscriptions), `SE.ADT.LITR.ZS` (literacy), `SP.DYN.IMRT.IN`
+(infant mortality), `SH.XPD.CHEX.GD.ZS` (health expenditure),
+`SH.MED.PHYS.ZS` (physicians), a CO2 emissions indicator, `AG.LND.FRST.ZS`
+(forest cover), `ER.LND.PTLD.ZS` (protected land), `AG.LND.AGRI.ZS`
+(agricultural land).
+
+**Coverage achieved (out of 175)**: internetPenetrationPct/
+internetUsersPct 174, mobileSubsPer100 174, renewableEnergyPct 171,
+literacyRatePct 153 (many developed countries simply don't report this
+to the World Bank since it's assumed ~99% — a real reporting gap, not
+a research failure), infantMortalityPer1000/healthExpPctGDP/
+physiciansPer1000 173, co2MtPerYear 167, forestPct 174,
+protectedLandPct 173, agriculturalLandPct 173.
+
+**Not yet done — 4 fields with no bulk source, still 0/175**:
+`airports`, `notableUniversities`, `mainCrops`, `notableTechNote`.
+These are genuine per-country judgment calls (which airports count as
+"major," which crops lead, which universities are internationally
+recognized) with no single reference table — the research pass got
+cut off by a session rate limit right as it was about to start this
+per-country phase, having correctly prioritized the bulk-sourceable
+fields first. A future pass should work through these 4 fields
+country-by-country.
+
+Verified in a real headless Firefox (Kuwait vs. Chad across all 6 new
+category tabs) before committing — renders correctly, no crashes,
+"no data" shown correctly for the unfilled fields above.
