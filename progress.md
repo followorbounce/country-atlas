@@ -441,3 +441,90 @@ country-by-country.
 Verified in a real headless Firefox (Kuwait vs. Chad across all 6 new
 category tabs) before committing — renders correctly, no crashes,
 "no data" shown correctly for the unfilled fields above.
+
+## 2026-09-20 — History.founded and Hazards filled for all 175 stub entities
+Continuing the category-by-category audit pass, this run targeted
+`history.founded` and the `hazards` category (both requested by the
+user alongside Culture — see below for why Culture itself is still
+incomplete).
+
+**`history.founded`: 175/175.** Sourced from Wikipedia's "List of
+national independence days" (a genuine bulk table covering the large
+majority of countries in 2 fetches) plus ~10 targeted searches for
+countries missing from that table (Bhutan, Cyprus, Andorra, Austria,
+Denmark, Hungary, Ireland, Italy — mostly old European monarchies with
+no single "independence day"). Caught and corrected several real
+errors/nuances rather than taking the bulk source at face value:
+Kenya's independence is 12 December **1963**, not 1964 (the source
+listed the Republic Day exactly one year later); Belarus's national
+"Independence Day" holiday actually commemorates the 1944 liberation
+from Nazi occupation, not the 1991 break from the USSR — a real and
+easy-to-miss quirk; Ecuador's 1809 date was an unsuccessful first
+attempt, with real independence secured at the 1822 Battle of
+Pichincha; Serbia's source entry had the wrong date entirely (it was
+showing Kosovo's 2008 declaration) — corrected using the real 1878/
+2006 dates. Countries with no colonial-era independence day (Ethiopia,
+Iran, Nepal, Thailand, Oman, Bhutan) are described as such rather than
+forced into the "independence day" framing.
+
+**`hazards` (`primary` + `note`): 174/175, with 1 genuine gap
+(South Sudan — absent from the source, which predates its 2011
+independence).** Sourced from a mirrored copy of the CIA World
+Factbook's "Natural hazards" field listing (the live CIA Factbook site
+was discontinued/"sunset" in February 2026, confirmed while trying to
+fetch it directly — a real, verifiable fact, not a research shortcut;
+the mirror at `user.iiasa.ac.at/~marek/fbook/` preserves the same
+standardized per-country field). This field already exists for nearly
+every country in a single consistent format, so this was a genuine
+bulk source, not per-country research — `primary` was derived by
+keyword-matching the original terse Factbook prose (earthquake →
+"Earthquakes", drought → "Drought", etc.), and `note` keeps the
+original Factbook text (trimmed if very long). 23 entities where the
+Factbook itself says "NA" (Luxembourg, Liechtenstein, Malta, Monaco,
+San Marino, Ireland, Finland, Belarus, Ukraine, Slovakia, Hungary,
+etc.) were given an explicit "No significant natural hazards reported"
+entry rather than left blank — this is real, sourced information (the
+Factbook evaluated these countries and found nothing notable), not a
+gap.
+
+**A real splicing bug caught and fixed mid-pass**: the first version
+of the hazards-splicing script used a single whole-file regex per
+country with a non-greedy "match anything except the target pattern"
+lookahead. For any country whose own `hazards: {}` wasn't immediately
+followed by the entity's closing brace (Libya, Somalia, Sudan, Yemen,
+and Vatican City all have an extra `fieldNotes` block after `hazards`,
+from earlier passes this session), the regex kept scanning **past
+that entity's own boundary** looking for the next occurrence of the
+exact pattern — silently writing one country's hazards data into a
+different, later country's slot (caught: Somalia's data had been
+written into South Africa's entry, and South Africa's had been written
+into South Sudan's). Caught via a spot-check that showed South
+Africa's "Primary hazards" as drought/flooding/dust-storms, which is
+Somalia's profile, not South Africa's. Fixed by rewriting the splicer
+to first split the file into individual entity blocks (on the `\n  {
+id: "` boundary) and do a scoped, single-entity replacement within
+each block — this can't cross entity boundaries by construction.
+Re-verified every previously-contaminated entity (South Africa,
+Somalia, South Sudan, Libya, Sudan, Yemen, Vatican City) individually
+before committing.
+
+**`culture` (religions, ethnicGroups, unescoSites, holidays) and
+`history.govSince` are still empty for all 175** — genuinely
+deferred, not skipped carelessly. Unlike area/population/GDP/hazards,
+these have no single clean bulk source covering all countries:
+UNESCO's own site-count-by-country isn't published as one fetchable
+table, "Religion by country" and "Ethnic groups by country" don't
+consolidate cleanly either, and `govSince` (when the *current*
+constitution took effect, as opposed to independence) needs a
+genuinely separate per-country lookup from `founded` for any country
+that's had more than one constitutional order since independence
+(most of them). A real attempt at grouped regional WebSearch queries
+for hazards-adjacent culture data returned unusably vague, unstructured
+prose rather than extractable per-country facts — a future pass should
+budget for ~175 individual per-country lookups rather than trying to
+batch this the way area/population/hazards were batched.
+
+Verified in a real headless Firefox (San Marino vs. South Sudan,
+Philippines vs. Mongolia, Kazakhstan vs. Vietnam) before committing —
+History and Hazards render correctly on both sides, Culture correctly
+shows "no data" rather than crashing, no console errors.

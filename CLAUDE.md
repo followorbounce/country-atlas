@@ -111,6 +111,19 @@ memory for the general rule this produced.
     instead of just "Khan Tengri (7,010 m)"), fixed with a second
     corrective regex pass, then re-verified in a real browser before
     committing.
+- **2026-09-20 — History.founded and Hazards completed for all 175.**
+  `history.founded`: 175/175, sourced from Wikipedia's "List of
+  national independence days" plus targeted lookups for the ~10
+  old-monarchy countries missing from that table. `hazards`: 174/175
+  (South Sudan is the one real gap), sourced from a mirror of the CIA
+  World Factbook's "Natural hazards" field — the live Factbook site
+  was itself discontinued in February 2026. `culture` (religions,
+  ethnic groups, UNESCO sites, holidays) and `history.govSince` are
+  still empty for all 175 — no clean bulk source exists for either, so
+  this genuinely needs a future per-country research pass rather than
+  the bulk-table approach that worked for area/population/GDP/hazards.
+  Full detail, including a real cross-entity data-contamination bug
+  caught and fixed during this pass, in progress.md.
 - **A new `kind: "disputed"` category** (alongside `country`/
   `territory`/`subnational`) was added for Palestine and Kosovo — an
   ordinary `"country"` tag would gloss over their contested status,
