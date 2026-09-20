@@ -132,5 +132,7 @@ two-color language consistently. `Archivo` (display/headings),
   in the assistant's memory.
 
 ## Deploy
-GitHub Pages, project-page URL under `followorbounce.github.io` (shares
-that Cloudflare Web Analytics site).
+Public repo, GitHub Pages from `main` root — live at
+https://followorbounce.github.io/country-atlas/. Shares the
+`followorbounce.github.io` Cloudflare Web Analytics site (see
+`[[cloudflare-analytics-setup]]` in the assistant's memory).

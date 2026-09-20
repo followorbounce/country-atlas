@@ -88,10 +88,14 @@ calls rather than treating my own first-draft numbers as good enough:
   fits South Korea 3.8×" against the actual area figures
   (377,975 / 100,210 ≈ 3.77) ✓.
 
+- **2026-09-19 (same day) — Pushed and deployed.** Public repo from the
+  start this time (both `tarot` and `world-calendar-explorer` ended up
+  public + Pages after the user confirmed once each — proceeded
+  directly on the established pattern rather than asking a third
+  time). Live at https://followorbounce.github.io/country-atlas/,
+  Cloudflare Web Analytics beacon confirmed present on the live page.
+
 ## Next steps
-- Not yet a git repo / not yet pushed — same as the calendar project,
-  this account has full GitHub access set up
-  (see `[[git-full-access-configured]]`), just needs the word.
 - The "Deliberately not built this pass" list in CLAUDE.md is the
   natural place to look for what to tackle next — the true map overlay
   tool is the single biggest lift (needs a real GeoJSON boundary
