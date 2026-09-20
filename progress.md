@@ -528,3 +528,48 @@ Verified in a real headless Firefox (San Marino vs. South Sudan,
 Philippines vs. Mongolia, Kazakhstan vs. Vietnam) before committing —
 History and Hazards render correctly on both sides, Culture correctly
 shows "no data" rather than crashing, no console errors.
+
+## 2026-09-20 — Transportation and Astronomy fill
+Continuing the category-by-category audit pass. This one leaned on
+different source types than the previous rounds:
+
+- **Transportation** (`roadNetworkKm`, `railNetworkKm`, `carsPerCapita`):
+  parsed 3 Wikipedia "List of countries by..." tables directly with
+  BeautifulSoup (road network size, rail transport network size,
+  vehicles per capita) — raw HTML table parsing, not a model summary,
+  same lesson as the Population/Government pass's voting-age parse.
+  Coverage: roadNetworkKm 153/175, railNetworkKm 128/175 (many small/
+  landlocked countries genuinely have no rail network and aren't in
+  the source table — a real fact, not a gap, though left blank rather
+  than assumed 0 since the table's absence could also mean "not
+  reported" for a few edge cases), carsPerCapita 146/175.
+- **Astronomy/Position on Earth** (`latRange`, `lonRange`,
+  `hemisphere`, `timeZones`, `daylightNote`): mostly *computed* from
+  two real bulk geographic sources rather than looked up field-by-field.
+  `sandstrom/country-bounding-boxes` (MIT/Unlicense, GitHub, the same
+  "find a real public coordinate dataset" pattern used for the sibling
+  [[us-states-atlas-site]]'s tile-grid map) gave real min/max lat/lon
+  per country for 147/175 — `hemisphere` and `daylightNote` were then
+  derived programmatically from that real range (not invented: a
+  country whose real latitude never leaves the tropics gets "minimal
+  variation," one whose real range crosses into high latitudes gets
+  "extreme variation," etc.) rather than sourced as separate facts.
+  The 28 missing (mostly Caribbean/Pacific/European microstates —
+  Vatican, Monaco, San Marino, Malta, Andorra, Liechtenstein, Nauru,
+  Palau, Kiribati, etc.) simply aren't in that 173-country dataset —
+  a real source gap, left blank rather than guessed at "it's tiny so
+  the range is basically a point."
+  `timeZones` used a different, independent real source: the IANA
+  `zone1970.tab` file (public domain, from the tz database maintainer
+  directly) maps every ISO 3166 country code to its actual named
+  zones; Python's `zoneinfo` module then computed each zone's current
+  UTC offset and counted *distinct offsets* per country (not raw zone
+  name count, which would overcount — e.g. the US has ~29 named zone
+  entries for historical DST-rule reasons but only ~7 distinct
+  standard offsets). This covered all 175 stubs, including the 28
+  missing from the bounding-box dataset.
+
+Verified in a real headless Firefox (Chad vs. Nauru, deliberately
+picking one entity with full bbox coverage and one without) — both
+tabs render correctly, genuinely-missing fields show "no data," no
+console errors.

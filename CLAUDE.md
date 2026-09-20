@@ -276,6 +276,25 @@ goal of "not subjective judgments." Approach:
   series at all for these 5 (only current-year GDP), since the research
   pass didn't produce verified historical GDP figures for them.
 
+## Category-by-category depth pass for the 175 core entities
+2026-09-20, following the entity-list correction above: the user asked
+to audit every remaining category the same way Geography had been —
+not just spot-fix a complaint, but systematically check for and fill
+gaps with real sourcing. Done, in order: Geography, Population/
+Languages/Government/Economy, Infrastructure/Education/Health/
+Environment/Agriculture/Technology, History.founded/Hazards,
+Transportation/Astronomy. See progress.md for the full sourcing detail
+per pass (World Bank indicator API, IANA tzdata, Wikipedia bulk list
+tables parsed directly with BeautifulSoup rather than model-summarized,
+a real country-bounding-box GitHub dataset). **Still empty for all/most
+of the 175**: `culture` (all 4 fields — no clean bulk source for
+religion/ethnicity breakdowns), `history.govSince`, and a handful of
+per-country judgment-call fields with no bulk source (`infrastructure.
+airports`, `education.notableUniversities`, `agriculture.mainCrops`,
+`economy.industries`, `government.largestCity`/`adminDivisions`,
+`languages.widely`) — a future pass should work through these
+country-by-country rather than trying to batch them.
+
 ## Deliberately not built this pass
 - **Interactive map / true equal-area overlay tool** — the brief's Map
   Overlay Tool (drag-transparency country-shape overlay without
