@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Country Comparison Atlas</title>
+<meta name="description" content="Compare any two countries, territories, or regions side by side — geography, demographics, culture, economy, infrastructure, and more, with transparent sourcing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "bba4e16a7d9b4d9985eda0cda2624e60"}'></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a href="#top" class="brand">
+      <svg class="glyph" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <ellipse cx="16" cy="16" rx="13" ry="5.5" fill="none" stroke="currentColor" stroke-width="1"/>
+        <line x1="16" y1="3" x2="16" y2="29" stroke="currentColor" stroke-width="1"/>
+        <line x1="3" y1="16" x2="29" y2="16" stroke="currentColor" stroke-width="1"/>
+      </svg>
+      Country Comparison Atlas
+    </a>
+    <nav class="cat-nav" id="catNav"></nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark/light theme">◐ Theme</button>
+  </div>
+</div>
+
+<main>
+  <div class="wrap" id="top">
+    <div class="hero">
+      <div class="eyebrow">A Living Global Atlas</div>
+      <h1>How are these places similar? How are they different?</h1>
+      <p>Compare any two countries, territories, or regions side by side across geography, demographics, culture, economy, infrastructure, and more — not to rank them, but to understand scale and difference.</p>
+    </div>
+
+    <div class="selector-row">
+      <div class="country-panel side-a" id="panelA"></div>
+      <div class="vs-badge">VS</div>
+      <div class="country-panel side-b" id="panelB"></div>
+    </div>
+
+    <div class="scale-strip" id="scaleStrip"></div>
+  </div>
+
+  <div class="wrap" id="categoryPanels"></div>
+
+  <div class="wrap">
+    <section class="category-panel" id="panel-special">
+      <div class="category-head"><h2>Special Comparisons</h2></div>
+      <p class="category-sub">Relative scale, a normalized multi-metric radar, and a simplified age-structure comparison.</p>
+      <div class="viz-grid">
+        <div class="viz-card">
+          <h3>Relative Scale</h3>
+          <div id="relativeScaleBody"></div>
+        </div>
+        <div class="viz-card">
+          <h3>Multi-Metric Radar</h3>
+          <svg id="radarChart" viewBox="0 0 340 340"></svg>
+          <div class="legend-row">
+            <span class="a"><span class="dot"></span><span id="radarLabelA"></span></span>
+            <span class="b"><span class="dot"></span><span id="radarLabelB"></span></span>
+          </div>
+          <p class="viz-caption">Each axis is normalized to a fixed reference scale (see Math note below), so the two shapes are directly comparable — not a ranking, just a shape comparison.</p>
+        </div>
+        <div class="viz-card">
+          <h3>Age Structure (broad brackets)</h3>
+          <svg id="pyramidChart" viewBox="0 0 340 220"></svg>
+          <p class="viz-caption">Approximate share aged 0–14 / 15–64 / 65+. A simplification of a true 5-year-band population pyramid, which this dataset doesn't carry.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <p class="meta-note" id="scopeNote"></p>
+  </div>
+</main>
+
+<footer>
+  <p>Educational reference, not a live data feed. Figures are approximate, recent-year (2023–2025) estimates compiled from CIA World Factbook, IMF, World Bank, and UN sources, cross-checked where noted — see each metric's <em>ⓘ</em> for source and confidence, and the project's own documentation for what's in scope. No tracking of personal data beyond anonymous aggregate analytics.</p>
+</footer>
+
+<div class="info-popover" id="infoPopover">
+  <button class="close-btn" id="infoPopoverClose" aria-label="Close">×</button>
+  <dl id="infoPopoverBody"></dl>
+</div>
+
+<script src="js/data/schema.js"></script>
+<script src="js/data/countries.js"></script>
+<script src="js/data/history-timeline.js"></script>
+<script src="js/format.js"></script>
+<script src="js/viz/radar.js"></script>
+<script src="js/viz/pyramid.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
