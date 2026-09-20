@@ -239,6 +239,10 @@ body {
 .stat-compare-bar .a { background: var(--side-a); }
 .stat-compare-bar .b { background: var(--side-b); }
 .stat-na { color: var(--ink-dim); font-style: italic; font-family: var(--font-body); font-size: 0.82rem; }
+.field-flag {
+  font-family: var(--font-body); font-size: 0.74rem; font-style: italic;
+  color: var(--accent-warn, #b0413e); white-space: normal; margin-top: 4px; line-height: 1.4;
+}
 
 .meta-note {
   font-size: 0.78rem; color: var(--ink-dim); background: var(--panel-alt);

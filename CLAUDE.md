@@ -16,15 +16,24 @@ data in one pass — either you fabricate most of it, or you cover very
 little. This site deliberately chose **breadth of category, depth of
 curation, narrow entity count** instead:
 
-- **25 hand-curated entities**, not the ~200 UN member states +
+- **30 hand-curated entities**, not the ~200 UN member states +
   territories the brief listed: Japan, South Korea, China, India,
   United States, Germany, Brazil, Russia, Australia, Canada, Iceland,
   Singapore, United Kingdom, France, Nigeria, Egypt, Indonesia,
   Switzerland, New Zealand, Taiwan, Hong Kong, Greenland, Puerto Rico,
-  California, Hawaii — chosen for diversity and because they cover
+  California, Hawaii, **Palestine, Kosovo, Faroe Islands, French
+  Polynesia, New Caledonia** (the last 5 added 2026-09-19, on request,
+  to specifically cover the brief's named disputed-territory/
+  dependency examples) — chosen for diversity and because they cover
   every explicit comparison example in the brief (Japan vs. South
   Korea, India vs. China, California vs. Germany, Greenland vs.
   Australia, Hawaii vs. Iceland, Taiwan vs. Singapore).
+- **A new `kind: "disputed"` category** (alongside `country`/
+  `territory`/`subnational`) was added for Palestine and Kosovo — an
+  ordinary `"country"` tag would gloss over their contested status,
+  and `"territory"` (used for uncontested cases like Greenland or the
+  Faroe Islands) implies a single clear administering sovereign, which
+  neither has in the same way.
 - **2-8 fields per category** (not the full 100+ item mega-list) — the
   most important, most reliably-known metrics per category. See
   `js/data/schema.js` for the exact field list and each field's
@@ -128,6 +137,46 @@ entirely.
   toggle is available for when the actual scale is what matters. Every
   point has a hover tooltip with the real value.
 - Population and GDP are separate toggleable metrics, not shown at once.
+
+## Disputed/contested entities: neutrality approach
+Palestine and Kosovo needed real editorial care, given the app's stated
+goal of "not subjective judgments." Approach:
+- Government-type and sovereignty-status fields use the same neutral,
+  factual register CIA World Factbook / UN / Wikipedia infoboxes use —
+  e.g. Kosovo's entry states plainly that it unilaterally declared
+  independence in 2008, is recognized by roughly 100-118 of 193 UN
+  member states (sources disagree on the exact count), is not a UN
+  member itself, and that Serbia disputes its sovereignty — without
+  taking a position on who's "right." Same approach for Palestine's
+  Oslo Accords Area A/B/C structure, the Gaza/West Bank Hamas/PA split,
+  and East Jerusalem's status.
+- **A new `entity.fieldNotes` mechanism** (an optional `{ "category.field":
+  "caveat text" }` map on an entity) was added specifically for cases
+  where a single number would be actively misleading without context —
+  the flagship case is Palestine's GDP, where the pre-war 2022 baseline
+  (~$17.2B) is the only reasonably-sourced figure, but the 2023-24 war
+  crashed West Bank GDP ~28% and Gaza's GDP ~81% in a single quarter.
+  Rather than picking one number and hiding the caveat in the generic
+  info popover, `renderStatRow()` in `app.js` now prints a visible
+  red-flagged note (⚠) directly under the value in the stat table
+  itself. Same mechanism used for Kosovo's population (sources diverge
+  meaningfully, ~1.58M vs ~1.98M) and New Caledonia's GDP (2023 figure
+  predates the May 2024 civil unrest).
+- Several qualitative fields for these 5 (`urbanPct`, `growthRatePct`,
+  `fertilityRate`, `ageDist` for Palestine/Kosovo especially) are
+  reasonable estimates rather than research-verified figures — the
+  research pass for these 5 entities prioritized the politically
+  load-bearing fields (status, recognition count, GDP) over exhaustive
+  verification of every demographic field, consistent with this
+  project's standing practice of spending verification effort where
+  it's most likely to matter.
+- Historical population time series for these 5 are genuinely sparse
+  (Palestine: 3 of 7 possible years; Kosovo: 1 of 7; the three French/
+  Danish territories: 2 of 7 each) because the research explicitly
+  flagged the other years as derived/unconfirmed rather than directly
+  sourced — left out rather than interpolated. No historical GDP
+  series at all for these 5 (only current-year GDP), since the research
+  pass didn't produce verified historical GDP figures for them.
 
 ## Deliberately not built this pass
 - **Interactive map / true equal-area overlay tool** — the brief's Map

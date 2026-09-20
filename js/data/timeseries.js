@@ -53,6 +53,15 @@ const TimeSeries = {
     "puerto-rico": { 1960: 2358000, 1970: 2718000, 1980: 3206000, 1990: 3537000, 2000: 3810605, 2010: 3724465, 2020: 3281591 },
     california: { 1960: 15717204, 1970: 19953134, 1980: 23667902, 1990: 29760021, 2000: 33871648, 2010: 37253956, 2020: 39538223 },
     hawaii: { 1960: 632772, 1970: 768559, 1980: 964691, 1990: 1108229, 2000: 1211537, 2010: 1360301, 2020: 1455271 },
+    // The five entities below have genuinely patchy historical series
+    // (border/definition/census issues per the research pass) — only
+    // years with a reasonably confident source are included; the rest
+    // are left out entirely rather than interpolated or guessed.
+    palestine: { 1960: 1100000, 1970: 1090000, 2000: 3180000 },
+    kosovo: { 1960: 947000 },
+    "faroe-islands": { 1960: 34600, 2020: 48865 },
+    "french-polynesia": { 1960: 78080, 2020: 280904 },
+    "new-caledonia": { 1960: 79000, 2020: 271960 },
   },
   gdpNominalUSD: {
     japan: { 1990: 3253.0e9, 2000: 5042.4e9, 2010: 5811.6e9, 2020: 5189.2e9 },

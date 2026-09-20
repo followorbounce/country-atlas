@@ -66,6 +66,10 @@
     wireInfoButtons();
   }
 
+  function fieldNote(entity, catKey, fieldKey) {
+    return entity.fieldNotes?.[`${catKey}.${fieldKey}`];
+  }
+
   function renderStatRow(cat, field, a, b) {
     const rawA = fieldValue(a, cat.key, field.key);
     const rawB = fieldValue(b, cat.key, field.key);
@@ -73,6 +77,8 @@
     const valB = Format.value(field, rawB);
     const magA = Format.magnitude(field, rawA);
     const magB = Format.magnitude(field, rawB);
+    const noteA = fieldNote(a, cat.key, field.key);
+    const noteB = fieldNote(b, cat.key, field.key);
     let bar = "";
     if (magA != null && magB != null && (magA > 0 || magB > 0)) {
       const total = magA + magB || 1;
@@ -81,13 +87,13 @@
     }
     return `
       <tr class="stat-row">
-        <td class="stat-val a">${valA ?? '<span class="stat-na">no data</span>'}</td>
+        <td class="stat-val a">${valA ?? '<span class="stat-na">no data</span>'}${noteA ? `<div class="field-flag">⚠ ${noteA}</div>` : ""}</td>
         <td class="stat-label">
           <span class="name">${field.label}</span>
           <button class="info-btn" data-cat="${cat.key}" data-field="${field.key}">what is this?</button>
           ${bar}
         </td>
-        <td class="stat-val b">${valB ?? '<span class="stat-na">no data</span>'}</td>
+        <td class="stat-val b">${valB ?? '<span class="stat-na">no data</span>'}${noteB ? `<div class="field-flag">⚠ ${noteB}</div>` : ""}</td>
       </tr>`;
   }
 
@@ -146,8 +152,8 @@
   }
 
   /* ---------- Country panels + search / browse-all ---------- */
-  const KIND_LABELS = { country: "Countries", territory: "Territories & SARs", subnational: "Subnational (states)" };
-  const KIND_ORDER = ["country", "territory", "subnational"];
+  const KIND_LABELS = { country: "Countries", territory: "Territories & SARs", disputed: "Disputed / Partially Recognized", subnational: "Subnational (states)" };
+  const KIND_ORDER = ["country", "territory", "disputed", "subnational"];
 
   function renderGroupedList(results) {
     const groups = KIND_ORDER.map((kind) => ({

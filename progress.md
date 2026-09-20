@@ -143,6 +143,59 @@ calls rather than treating my own first-draft numbers as good enough:
     actual rendered first/last point values against the source data by
     hand.
 
+- **2026-09-19 (same day) — Added 5 more entities: Palestine, Kosovo,
+  Faroe Islands, French Polynesia, New Caledonia.** User asked why the
+  list was only 25, then specifically requested these 5 — the ones
+  explicitly named in the original brief but missing from the first
+  pass.
+  - Forked a research agent with an explicit neutrality brief for
+    Palestine/Kosovo (asked it to use CIA World Factbook/UN/Wikipedia-
+    style neutral phrasing for government-type/sovereignty fields, not
+    editorialize either direction). It came back well-calibrated: every
+    politically sensitive fact (recognition counts, the Oslo Accords
+    Area A/B/C structure, the Gaza/PA split, Kosovo's 2008 declaration
+    and disputed status) was phrased factually, and it proactively
+    flagged where sourcing was genuinely unstable rather than picking
+    one convenient number — most notably Palestine's GDP, which
+    collapsed 28-81% depending on region after October 2023 and can't
+    honestly be reduced to one "current" figure.
+  - Added a new `kind: "disputed"` category (alongside the existing
+    `country`/`territory`/`subnational`) specifically for Palestine and
+    Kosovo, plus a 4th browse-all group ("Disputed / Partially
+    Recognized") — verified in the browser that all 30 entities
+    (up from 25) show correctly grouped.
+  - Built a new small feature rather than just stuffing a caveat into
+    the info popover: `entity.fieldNotes`, a per-entity per-field
+    override that renders as a visible ⚠ note directly under the
+    value in the stat table (not just hidden behind "what is this?").
+    Used for Palestine's GDP (pre-war baseline vs. wartime collapse),
+    Kosovo's population (~1.58M vs ~1.98M source disagreement), and
+    New Caledonia's GDP (pre-May-2024-unrest baseline). This is a
+    genuinely reusable mechanism for any future entity with a similar
+    "this number needs context, not just a bare figure" problem.
+  - Historical time series for these 5 are intentionally sparse
+    (Palestine 3/7 population years, Kosovo 1/7, the other three 2/7
+    each, none with historical GDP) — the research flagged most other
+    year/entity combinations as derived-not-sourced, and those were
+    left out rather than guessed, consistent with how this project has
+    handled uncertain data from the start.
+  - User also suggested checking artlebedev.com/susha/ (Art. Lebedev
+    Studio's "Land Surface" poster project) as a possible data source —
+    fetched and checked it directly rather than assuming: it's a 2016
+    design/poster project with no downloadable dataset or individual
+    territory pages, and it explicitly *excludes* dependent territories
+    from the poster — so it couldn't have covered 3 of the 5 entities
+    being added anyway. Reported this back rather than silently
+    ignoring the suggestion or pretending to use a source that didn't
+    fit.
+  - Verified all of the above in a real headless Firefox: entity count
+    (30), new browse-all group, Palestine/Kosovo card rendering, the
+    GDP field-flag actually appearing in the Economy tab, no layout
+    overflow from Palestine's long government-status paragraph (the
+    `table-layout: fixed` fix from the earlier bug-fix pass held up),
+    and the growth chart handling sparse series gracefully for
+    New Caledonia vs. French Polynesia and Faroe Islands vs. Greenland.
+
 ## Next steps
 - The "Deliberately not built this pass" list in CLAUDE.md is the
   natural place to look for what to tackle next — the true map overlay
