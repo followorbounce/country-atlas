@@ -11,23 +11,49 @@ timeline. No build step, no framework — plain HTML/CSS/JS.
 
 ## Scope & data honesty
 The brief asked for "as many countries/territories as possible" across
-100+ possible metrics. That's not achievable with genuinely verified
-data in one pass — either you fabricate most of it, or you cover very
-little. This site deliberately chose **breadth of category, depth of
-curation, narrow entity count** instead:
+100+ possible metrics. **Entity count and data depth are two separate
+axes, and only one of them is allowed to vary.** Earlier in this
+project's history, the entity list itself was curated down to ~25-30
+"hand-picked" countries, reasoning that verified data was only
+realistic for a smaller set — the user corrected this firmly: a list
+of which countries/territories exist is not something that needs
+per-entry verification the way a GDP figure does, so it must be
+complete. Depth of data, not the roster, is the axis that legitimately
+varies. See `[[feedback-entity-list-vs-data-depth]]` in the assistant's
+memory for the general rule this produced.
 
-- **30 hand-curated entities**, not the ~200 UN member states +
-  territories the brief listed: Japan, South Korea, China, India,
-  United States, Germany, Brazil, Russia, Australia, Canada, Iceland,
-  Singapore, United Kingdom, France, Nigeria, Egypt, Indonesia,
-  Switzerland, New Zealand, Taiwan, Hong Kong, Greenland, Puerto Rico,
-  California, Hawaii, **Palestine, Kosovo, Faroe Islands, French
-  Polynesia, New Caledonia** (the last 5 added 2026-09-19, on request,
-  to specifically cover the brief's named disputed-territory/
-  dependency examples) — chosen for diversity and because they cover
-  every explicit comparison example in the brief (Japan vs. South
-  Korea, India vs. China, California vs. Germany, Greenland vs.
-  Australia, Hawaii vs. Iceland, Taiwan vs. Singapore).
+- **205 entities**: every UN member state (193) + the Holy See +
+  11 additional territories/disputed regions researched earlier
+  (Greenland, Puerto Rico, California, Hawaii, Taiwan, Hong Kong,
+  Palestine, Kosovo, Faroe Islands, French Polynesia, New Caledonia).
+  The original 30 hand-curated entities (Japan, South Korea, China,
+  India, United States, Germany, Brazil, Russia, Australia, Canada,
+  Iceland, Singapore, United Kingdom, France, Nigeria, Egypt,
+  Indonesia, Switzerland, New Zealand, and the 11 above) still have
+  the fullest, most-verified profiles across all 16 categories.
+- **The other 175 entities** (`CountriesCore` in `js/data/countries.js`)
+  started 2026-09-19 as bare stubs (id/name/flag/kind only, every
+  category object empty `{}`), then got a first real-data pass the
+  same day: 9 core fields — total area, population, GDP nominal,
+  capital, official language(s), currency, government type, median
+  age, and (where sourced) life expectancy — filled in from Wikipedia
+  reference tables (population/UN, area, GDP/IMF, national capitals,
+  official languages, circulating currencies, median age/CIA,
+  government systems) fetched directly via WebFetch. The other 10
+  categories (culture, history beyond what's in
+  `history-timeline.js`, infrastructure, education, environment,
+  agriculture, transportation, technology, position on Earth, natural
+  hazards) are still empty `{}` for these 175 — a depth gap, not a
+  roster gap, and the app is fully defensive about it (every render
+  path uses optional chaining and shows "no data" rather than
+  crashing or guessing).
+- Life expectancy specifically could only be reliably sourced for
+  ~96 of the 175 (WebFetch's extraction of the long Wikipedia table
+  became unreliable past a certain point — a re-check caught it
+  fabricating a suspiciously perfect linear staircase of values for
+  the lower part of the ranking, which was discarded rather than used;
+  see progress.md for the detail). The unfilled ones show "no data"
+  rather than an invented number.
 - **A new `kind: "disputed"` category** (alongside `country`/
   `territory`/`subnational`) was added for Palestine and Kosovo — an
   ordinary `"country"` tag would gloss over their contested status,
@@ -73,8 +99,10 @@ meaningful corrections that were applied:
 - `js/data/schema.js` — the 16 categories and their fields: label,
   unit, display format (`fmt`), definition, and source. Drives both
   the UI labels and the Data Explorer info popovers.
-- `js/data/countries.js` — the 25-entity dataset, structured to
-  mirror the schema's category/field keys 1:1.
+- `js/data/countries.js` — the 205-entity dataset (`Countries`, the
+  original 30 full-depth entities, plus `CountriesCore`, the 175
+  UN-member/Vatican entities with the 9-field core-data pass described
+  above), structured to mirror the schema's category/field keys 1:1.
 - `js/data/history-timeline.js` — 3-5 well-known historical milestones
   per entity, for the synchronized dual-timeline view (History
   category only — separate from `schema.js`'s `founded`/`govSince`

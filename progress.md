@@ -196,6 +196,95 @@ calls rather than treating my own first-draft numbers as good enough:
     and the growth chart handling sparse series gracefully for
     New Caledonia vs. French Polynesia and Faroe Islands vs. Greenland.
 
+- **2026-09-19 (same day) — Critical correction: full entity roster,
+  not a curated subset.** The user was very unhappy to discover the
+  list was still only ~25-30 countries when the brief had explicitly
+  asked for all countries/territories, and pointed out (correctly)
+  that a list of which countries exist doesn't need "verification" the
+  way a statistic does — only the fields being filled in do. Fix:
+  added stub entries (`CountriesCore` in `js/data/countries.js`) for
+  all 174 remaining UN member states + Vatican City, bringing the
+  total to 205. Made every render path in `js/app.js` defensive with
+  optional chaining (`renderCard`, `renderScaleStrip`, the relative-
+  scale text, `density()`, `PyramidViz.render`) so a dataset spanning
+  full 16-category entities next to near-empty stubs can't crash.
+  Committed immediately as "Phase 1" before starting the research pass
+  below. See `[[feedback-entity-list-vs-data-depth]]` in the
+  assistant's memory — this is now a standing rule for any project
+  with a "list all X" brief.
+
+- **2026-09-19 (same day) — First core-data research pass on the 175
+  stub entities.** 5 parallel research subagents (one per world
+  region) were tried first and all 5 failed with HTTP 429 "session
+  limit" rate-limit errors. Direct WebFetch calls from the main
+  session kept working, so the research was redone as a single
+  sequential pass of WebFetch calls against comprehensive Wikipedia
+  reference tables instead of per-country lookups — far more
+  efficient for 175 entities at once:
+  - Population: "List of countries by population (United Nations)"
+  - Area: "List of countries and dependencies by area"
+  - GDP nominal: "List of countries by GDP (nominal)" (IMF figures)
+  - Capital: "List of national capitals"
+  - Official language(s): "List of official languages by country and
+    territory"
+  - Currency: "List of circulating currencies"
+  - Median age: "List of countries by median age" (CIA 2024 estimates)
+  - Government type: "List of countries by system of government"
+  - Life expectancy: "List of countries by life expectancy" — **only
+    partially usable**. A first fetch attempt returned entries for the
+    lower-ranked (mostly African) countries that formed a suspiciously
+    perfect linear staircase (constant −0.15/country decrements) —
+    almost certainly the WebFetch summarization model interpolating
+    rather than reading real table cells. A stricter, explicitly
+    anti-fabrication re-fetch confirmed the real page content available
+    to the tool only covered down to Ukraine (73.42 years); everything
+    below that in the first attempt was discarded rather than used.
+    Result: life expectancy is filled in for ~96 of the 175 entities
+    (elsewhere in the "no data" style seen throughout this dataset);
+    the rest — mostly African and a handful of Asian states — simply
+    don't have it yet. **This is the cautionary example for this
+    project going forward: verify WebFetch table extractions for
+    internal consistency (monotonic tables producing suspiciously
+    regular arithmetic sequences is a tell), don't just trust a
+    fluent-looking response.**
+  - Cross-referencing ~200-row tables by country name surfaced the
+    expected naming mismatches (Ivory Coast vs. Côte d'Ivoire, DR
+    Congo vs. Democratic Republic of the Congo vs. Congo DR, Cape
+    Verde vs. Cabo Verde, Czechia vs. Czech Republic, Timor-Leste vs.
+    East Timor) — resolved via an explicit per-field alias map, not
+    fuzzy matching.
+  - **Real bug caught and fixed during this pass, not before it**: the
+    stub-generation code from the earlier "Phase 1" commit ended with
+    `].map((e) => ({ ...e, geography: {}, population: {}, ... }))` —
+    a transformation that unconditionally reset every category back to
+    an empty object. It was originally meant to *initialize* the
+    stubs, but was still present and running *after* this pass's real
+    data was spliced into the array literal, silently wiping every
+    field back out. First Selenium check showed Kenya/Vietnam
+    rendering "no data" everywhere despite the served JS file visibly
+    containing correct data — traced by injecting a real `<script>`
+    tag into the live page (not `execute_script`, which runs in an
+    isolated context that can't see top-level `const` bindings from
+    other `<script>` tags) to dump the in-memory `Countries` entry and
+    confirm it really was empty in-page, then finding and deleting the
+    leftover `.map()` call. Re-verified after the fix: Kenya and
+    Vietnam both render full capital/population/area/GDP/currency/
+    government-type correctly, and Vatican City (the sparsest entry —
+    only currency, capital, government type, and official language
+    could be sourced; no area/population/GDP appear in these reference
+    tables for a state that small) degrades to "Data not available"
+    everywhere else without crashing any tab, including Special
+    Comparisons (radar/pyramid/growth).
+  - Result: 65 of 175 stub entities got all 9 core fields; 109 got a
+    partial set (most missing only life expectancy); 0 got zero fields
+    (Vatican City is the sparsest, at 4 of 9).
+  - Still not filled in for these 175: the other 10 of 16 categories
+    (culture, further history, infrastructure, education, environment,
+    agriculture, transportation, technology, position on Earth, hazards)
+    and GDP PPP/urban population/unemployment — a legitimate next-pass
+    target if deeper coverage is wanted, following the same "verify or
+    leave blank" discipline.
+
 ## Next steps
 - The "Deliberately not built this pass" list in CLAUDE.md is the
   natural place to look for what to tackle next — the true map overlay
