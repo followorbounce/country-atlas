@@ -68,9 +68,13 @@ const RadarViz = (() => {
 
     function drawEntity(entity, color) {
       const values = AXES.map((axis) => {
-        try { return axis.norm(axis.get(entity)); } catch (e) { return 0; }
+        try { return axis.norm(axis.get(entity)); } catch (e) { return NaN; }
       });
-      const pts = polygonPoints(cx, cy, maxR, values);
+      // A missing source field yields NaN/undefined here; one NaN in the
+      // points list made the browser drop the whole polygon. Plot missing
+      // axes at the centre and mark them with a hollow dot instead.
+      const missing = values.map((v) => !Number.isFinite(v));
+      const pts = polygonPoints(cx, cy, maxR, values.map((v, i) => (missing[i] ? 0 : v)));
       const poly = document.createElementNS(ns, "polygon");
       poly.setAttribute("points", pts.map((p) => `${p.x},${p.y}`).join(" "));
       poly.setAttribute("fill", color);
@@ -78,7 +82,8 @@ const RadarViz = (() => {
       poly.setAttribute("stroke", color);
       poly.setAttribute("stroke-width", "2");
       svg.appendChild(poly);
-      pts.forEach((p) => {
+      pts.forEach((p, i) => {
+        if (missing[i]) return; // no data: no dot at the centre pretending to be a value
         const dot = document.createElementNS(ns, "circle");
         dot.setAttribute("cx", p.x); dot.setAttribute("cy", p.y); dot.setAttribute("r", "2.5");
         dot.setAttribute("fill", color);

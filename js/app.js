@@ -83,7 +83,9 @@
     const noteA = fieldNote(a, cat.key, field.key);
     const noteB = fieldNote(b, cat.key, field.key);
     let bar = "";
-    if (magA != null && magB != null && (magA > 0 || magB > 0)) {
+    // Proportional split only makes sense for two non-negative values;
+    // a negative (e.g. population growth -0.5%) would give a negative width.
+    if (magA != null && magB != null && magA >= 0 && magB >= 0 && (magA > 0 || magB > 0)) {
       const total = magA + magB || 1;
       const pctA = (magA / total) * 100;
       bar = `<div class="stat-compare-bar"><div class="a" style="width:${pctA}%"></div><div class="b" style="width:${100 - pctA}%"></div></div>`;
@@ -183,8 +185,8 @@
       <div class="panel-side-label">Side ${side.toUpperCase()}</div>
       <div class="search-box">
         <div class="search-row">
-          <input type="text" placeholder="Search or browse all ${Countries.length}..." data-side="${side}">
-          <button type="button" class="browse-btn" data-side="${side}" title="Browse full list">☰</button>
+          <input type="text" placeholder="Search or browse all ${Countries.length}..." aria-label="Search entity for side ${side.toUpperCase()}" data-side="${side}">
+          <button type="button" class="browse-btn" data-side="${side}" title="Browse full list" aria-label="Browse full list for side ${side.toUpperCase()}">☰</button>
         </div>
         <div class="search-results" data-side="${side}"></div>
       </div>

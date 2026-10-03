@@ -1,5 +1,5 @@
 /* ============================================================
-   Entity dataset — 24 countries/territories/subnational entities.
+   Entity dataset — 203 countries/territories (see CLAUDE.md for depth).
    Figures are recent-year estimates (~2023-2024) from general
    reference knowledge, cross-checked against a research pass for
    the most volatile/scrutinized numbers (population, GDP, area,
