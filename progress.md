@@ -727,7 +727,7 @@ sparse fields needs a dedicated per-country research pass, not another
 bulk-source hunt — there isn't a bulk source left to find for
 `mainCrops`, `notableUniversities`, or `notableTechNote`.
 
-## 2026-10-02 — Applications & Data review pass (not committed)
+## 2026-10-02 — Applications & Data review pass (committed in 2eedb12, pushed)
 - **Fixed** `js/viz/radar.js`: an entity missing any one radar field (9 entities, e.g. Tuvalu/Monaco/Liechtenstein with no `population.total`) produced `NaN` in the polygon `points`, so the browser dropped that side's whole shape. Missing axes now plot at the centre with no dot.
 - **Fixed** `js/app.js` `renderStatRow`: the proportional A/B bar was drawn for negative values (only `population.growthRatePct` has any), giving negative/over-100% widths. Bar now only drawn when both values are >= 0.
 - `js/app.js`: search input and browse button got `aria-label`s. `countries.js` header comment updated (said "24 countries").
