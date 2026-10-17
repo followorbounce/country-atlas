@@ -376,6 +376,7 @@
     renderScaleStrip();
     renderCategoryData();
     renderSpecial();
+    if (typeof BordersViz !== "undefined") BordersViz.update(sideA, sideB);
   }
 
   function init() {
@@ -386,6 +387,9 @@
     initPopoverClose();
     initGrowthControls();
     renderScopeNote();
+    if (typeof BordersViz !== "undefined") BordersViz.init({
+      select: (side, id) => { selectCountry(side, id); document.getElementById("top").scrollIntoView({ behavior: "smooth" }); },
+    });
     setActiveCategory(activeCategory);
     renderAll();
   }

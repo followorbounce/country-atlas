@@ -306,6 +306,15 @@ airports`, `education.notableUniversities`, `agriculture.mainCrops`,
 `languages.widely`) — a future pass should work through these
 country-by-country rather than trying to batch them.
 
+## Borders & Neighbours graph (2026-10-16)
+Section `#borders` directly under the A/B selector: every entity as a round flag placed near its geographic centre, joined to each land neighbour (the owner's reference was a hand-drawn "countries as a border graph" picture; built in the atlas's own style).
+- Code: `js/viz/borders.js` (`BordersViz.init/update`; `app.js` calls `update(sideA, sideB)` in `renderAll` and gives it `select(side,id)` for the "Compare as A/B" buttons). Styles at the end of `style.css` (also the first real `.chip` style, which the Growth toggles lacked).
+- Data: `js/data/borders.js` is **generated** by `python3 tools/build_borders.py` from `tools/borders-source.json` (the research pass: 327 edges incl. 4 bridge/tunnel-only that are not drawn, 45 anomalies, checks) + `tools/positions.json` (ISO2 + approximate centre per id, Google DSPL countries.csv). The build fails on unknown ids or duplicate pairs. Edge types: `land`, `via-territory` (+ `via`: French Guiana, Kaliningrad, Gibraltar, Ceuta/Melilla, Akrotiri/Dhekelia, Saint Martin, Cabinda, Nakhchivan), `disputed` (Kosovo–Serbia, Israel–Palestine, Morocco–Mauritania via Western Sahara), `bridge-or-tunnel-only`.
+- Primary source CIA World Factbook "Land boundaries" (Jan 2026, final edition, read from the factbook.json mirror, not retyped); Wikipedia list used for topology cross-check only (its table is tagged unreferenced). Every resolved disagreement is in `borders-source.json` → `checks.source_disagreements_resolved`; unverified items in `checks.not_verified`.
+- Layout: equirectangular centroid (lon < −140 wrapped east), then deterministic collision relaxation; schematic positions, exact connections. Circles sized by area only. **Interaction (owner rule 2026-10-16, "don't reset my choice"):** a click on a flag selects it and the selection stays — hover only shows the name (`<title>`), clicks on empty space and leaving the graph change nothing; it changes only on another flag, an anomaly card, or the × button. Controls kept minimal on purpose: zoom −/+/Whole map, a static legend, no size or line-type toggles. Route A→B = BFS over land + via-territory + disputed edges, each via-step labelled.
+- Flags: `assets/flags/*.svg` (1x1 set from flag-icons 7.2.3, MIT, `assets/flags/LICENSE`), only the 203 used.
+- Phone: graph is ~190 px tall at 390 px width; + / pinch (once zoomed) / drag to explore; the full text list under it is the accessible alternative.
+
 ## Deliberately not built this pass
 - **Interactive map / true equal-area overlay tool** — the brief's Map
   Overlay Tool (drag-transparency country-shape overlay without
@@ -316,7 +325,7 @@ country-by-country rather than trying to batch them.
   cultural adoption — not applicable here, but same category of cut
   as the sibling calendar project: real interactive maps need a real
   geo dataset, not fabricated.
-- **Sankey diagrams, tree maps, network diagrams** — not built. The
+- **Sankey diagrams, tree maps** — not built (a network diagram now exists: the Borders & Neighbours graph above). The
   radar chart and pyramid were prioritized as the two highest-value,
   most tractable visualizations from the brief's list.
 - **True 5-year-band population pyramids** — only the 3-bracket

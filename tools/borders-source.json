@@ -1,0 +1,3911 @@
+{
+ "edges": [
+  {
+   "a": "afghanistan",
+   "b": "china",
+   "km": 91.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "afghanistan",
+   "b": "iran",
+   "km": 921.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "afghanistan",
+   "b": "pakistan",
+   "km": 2670.0,
+   "type": "land",
+   "via": null,
+   "note": "Durand Line, not formally recognised by Afghanistan.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "afghanistan",
+   "b": "tajikistan",
+   "km": 1357.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "afghanistan",
+   "b": "turkmenistan",
+   "km": 804.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "afghanistan",
+   "b": "uzbekistan",
+   "km": 144.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "albania",
+   "b": "greece",
+   "km": 212.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "albania",
+   "b": "kosovo",
+   "km": 112.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "albania",
+   "b": "montenegro",
+   "km": 186.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "albania",
+   "b": "north-macedonia",
+   "km": 181.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "algeria",
+   "b": "libya",
+   "km": 989.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "algeria",
+   "b": "mali",
+   "km": 1359.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "algeria",
+   "b": "mauritania",
+   "km": 460.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "algeria",
+   "b": "morocco",
+   "km": 1941.0,
+   "type": "land",
+   "via": null,
+   "note": "Excludes the 41 km Algeria-Western Sahara segment (Factbook). Border closed since 1994.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "algeria",
+   "b": "niger",
+   "km": 951.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "algeria",
+   "b": "tunisia",
+   "km": 1034.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "andorra",
+   "b": "france",
+   "km": 55.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "andorra",
+   "b": "spain",
+   "km": 63.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "angola",
+   "b": "congo-dr",
+   "km": 2646.0,
+   "type": "land",
+   "via": null,
+   "note": "Includes 225 km between Cabinda exclave and DRC.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "angola",
+   "b": "congo-republic",
+   "km": 231.0,
+   "type": "via-territory",
+   "via": "Cabinda",
+   "note": "Entire border is with the Cabinda exclave.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "angola",
+   "b": "namibia",
+   "km": 1427.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "angola",
+   "b": "zambia",
+   "km": 1065.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "argentina",
+   "b": "bolivia",
+   "km": 942.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "argentina",
+   "b": "brazil",
+   "km": 1263.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "argentina",
+   "b": "chile",
+   "km": 6691.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "argentina",
+   "b": "paraguay",
+   "km": 2531.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "argentina",
+   "b": "uruguay",
+   "km": 541.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "armenia",
+   "b": "azerbaijan",
+   "km": 996.0,
+   "type": "land",
+   "via": null,
+   "note": "Includes Armenia-Nakhchivan segment; enclaves (Artsvashen, Karki, Yukhari Askipara, Barkhudarly) per Wikipedia. Delimitation process ongoing.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "armenia",
+   "b": "georgia",
+   "km": 219.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "armenia",
+   "b": "iran",
+   "km": 44.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "armenia",
+   "b": "turkey",
+   "km": 311.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "austria",
+   "b": "czech-republic",
+   "km": 402.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "austria",
+   "b": "germany",
+   "km": 801.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "austria",
+   "b": "hungary",
+   "km": 321.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "austria",
+   "b": "italy",
+   "km": 404.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "austria",
+   "b": "liechtenstein",
+   "km": 34.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "austria",
+   "b": "slovakia",
+   "km": 105.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "austria",
+   "b": "slovenia",
+   "km": 299.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "austria",
+   "b": "switzerland",
+   "km": 158.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "azerbaijan",
+   "b": "georgia",
+   "km": 428.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "azerbaijan",
+   "b": "iran",
+   "km": 689.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "azerbaijan",
+   "b": "russia",
+   "km": 338.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "azerbaijan",
+   "b": "turkey",
+   "km": 17.0,
+   "type": "via-territory",
+   "via": "Nakhchivan Autonomous Republic",
+   "note": "Entire border is with the Nakhchivan exclave (Factbook 17 km; Wikipedia 9 km).",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "bahrain",
+   "b": "saudi-arabia",
+   "km": null,
+   "type": "bridge-or-tunnel-only",
+   "via": null,
+   "note": "King Fahd Causeway; boundary on artificial Passport Island (~196 m per Wikipedia). Factbook lists Bahrain at 0 km land boundary.",
+   "src": "Wikipedia \"List of countries and territories by number of land borders\" (Artificial border crossings); Factbook"
+  },
+  {
+   "a": "bangladesh",
+   "b": "india",
+   "km": 4142.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "bangladesh",
+   "b": "myanmar",
+   "km": 271.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "belarus",
+   "b": "latvia",
+   "km": 161.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "belarus",
+   "b": "lithuania",
+   "km": 640.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "belarus",
+   "b": "poland",
+   "km": 375.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "belarus",
+   "b": "russia",
+   "km": 1312.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "belarus",
+   "b": "ukraine",
+   "km": 1111.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "belgium",
+   "b": "france",
+   "km": 556.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "belgium",
+   "b": "germany",
+   "km": 133.0,
+   "type": "land",
+   "via": null,
+   "note": "Includes Vennbahn trackbed (Belgian) creating German enclaves.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "belgium",
+   "b": "luxembourg",
+   "km": 130.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "belgium",
+   "b": "netherlands",
+   "km": 478.0,
+   "type": "land",
+   "via": null,
+   "note": "Includes the Baarle-Hertog/Baarle-Nassau enclave complex (Wikipedia: 31 separate segments).",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "belize",
+   "b": "guatemala",
+   "km": 266.0,
+   "type": "land",
+   "via": null,
+   "note": "Guatemala claims much of Belize; case before the ICJ.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "belize",
+   "b": "mexico",
+   "km": 276.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "benin",
+   "b": "burkina-faso",
+   "km": 386.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "benin",
+   "b": "niger",
+   "km": 277.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "benin",
+   "b": "nigeria",
+   "km": 809.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "benin",
+   "b": "togo",
+   "km": 651.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "bhutan",
+   "b": "china",
+   "km": 477.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "bhutan",
+   "b": "india",
+   "km": 659.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "bolivia",
+   "b": "brazil",
+   "km": 3403.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "bolivia",
+   "b": "chile",
+   "km": 942.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "bolivia",
+   "b": "paraguay",
+   "km": 753.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "bolivia",
+   "b": "peru",
+   "km": 1212.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "bosnia-and-herzegovina",
+   "b": "croatia",
+   "km": 956.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "bosnia-and-herzegovina",
+   "b": "montenegro",
+   "km": 242.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "bosnia-and-herzegovina",
+   "b": "serbia",
+   "km": 345.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "botswana",
+   "b": "namibia",
+   "km": 1544.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "botswana",
+   "b": "south-africa",
+   "km": 1969.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "botswana",
+   "b": "zambia",
+   "km": 0.15,
+   "type": "land",
+   "via": null,
+   "note": "~150 m at Kazungula on the Zambezi; formerly thought to be a quadripoint with Namibia and Zimbabwe. The shortest complete border between two countries.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "botswana",
+   "b": "zimbabwe",
+   "km": 834.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "brazil",
+   "b": "colombia",
+   "km": 1790.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "brazil",
+   "b": "france",
+   "km": 649,
+   "type": "via-territory",
+   "via": "French Guiana",
+   "note": "France's longest land border (Factbook 649 km vs Spain 646 km; Wikipedia 673 vs 623).",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\" (Brazil, France \"French Guiana - total\")"
+  },
+  {
+   "a": "brazil",
+   "b": "guyana",
+   "km": 1308.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "brazil",
+   "b": "paraguay",
+   "km": 1371.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "brazil",
+   "b": "peru",
+   "km": 2659.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "brazil",
+   "b": "suriname",
+   "km": 515.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "brazil",
+   "b": "uruguay",
+   "km": 1050.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "brazil",
+   "b": "venezuela",
+   "km": 2137.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "brunei",
+   "b": "malaysia",
+   "km": 266.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "bulgaria",
+   "b": "greece",
+   "km": 472.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "bulgaria",
+   "b": "north-macedonia",
+   "km": 162.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "bulgaria",
+   "b": "romania",
+   "km": 605.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "bulgaria",
+   "b": "serbia",
+   "km": 344.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "bulgaria",
+   "b": "turkey",
+   "km": 223.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "burkina-faso",
+   "b": "ghana",
+   "km": 602.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "burkina-faso",
+   "b": "ivory-coast",
+   "km": 545.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "burkina-faso",
+   "b": "mali",
+   "km": 1325.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "burkina-faso",
+   "b": "niger",
+   "km": 622.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "burkina-faso",
+   "b": "togo",
+   "km": 131.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "burundi",
+   "b": "congo-dr",
+   "km": 236.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "burundi",
+   "b": "rwanda",
+   "km": 315.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "burundi",
+   "b": "tanzania",
+   "km": 589.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "cambodia",
+   "b": "laos",
+   "km": 555.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "cambodia",
+   "b": "thailand",
+   "km": 817.0,
+   "type": "land",
+   "via": null,
+   "note": "Preah Vihear area disputed; armed clashes 2025.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "cambodia",
+   "b": "vietnam",
+   "km": 1158.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "cameroon",
+   "b": "central-african-republic",
+   "km": 901.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "cameroon",
+   "b": "chad",
+   "km": 1116.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "cameroon",
+   "b": "congo-republic",
+   "km": 494.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "cameroon",
+   "b": "equatorial-guinea",
+   "km": 183.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "cameroon",
+   "b": "gabon",
+   "km": 349.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "cameroon",
+   "b": "nigeria",
+   "km": 1975.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "canada",
+   "b": "greenland",
+   "km": 1.3,
+   "type": "land",
+   "via": null,
+   "note": "Hans Island (Tartupaluk), split by Canada-Denmark/Greenland agreement signed 14 Jun 2022 (~1.3 km per Factbook; ~1.28 km per Wikipedia). Factbook carries it under Denmark and Canada; its Greenland entry still says 0 km.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\" (Canada, Denmark entries); Wikipedia \"Hans Island\""
+  },
+  {
+   "a": "canada",
+   "b": "united-states",
+   "km": 8891.0,
+   "type": "land",
+   "via": null,
+   "note": "Includes 2,475 km Canada-Alaska. Longest international land border.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "central-african-republic",
+   "b": "chad",
+   "km": 1556.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "central-african-republic",
+   "b": "congo-dr",
+   "km": 1747.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "central-african-republic",
+   "b": "congo-republic",
+   "km": 487.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "central-african-republic",
+   "b": "south-sudan",
+   "km": 1055.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "central-african-republic",
+   "b": "sudan",
+   "km": 174.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "chad",
+   "b": "libya",
+   "km": 1050.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "chad",
+   "b": "niger",
+   "km": 1196.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "chad",
+   "b": "nigeria",
+   "km": 85.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "chad",
+   "b": "sudan",
+   "km": 1403.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "chile",
+   "b": "peru",
+   "km": 168.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "china",
+   "b": "hong-kong",
+   "km": 33,
+   "type": "land",
+   "via": null,
+   "note": "Hong Kong SAR-mainland boundary, internal to PRC sovereignty but administered as a controlled border (Factbook \"regional borders\"). Wikipedia 30 km.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\" (Hong Kong)"
+  },
+  {
+   "a": "china",
+   "b": "india",
+   "km": 2659.0,
+   "type": "land",
+   "via": null,
+   "note": "Largely undemarcated; Line of Actual Control disputed (Aksai Chin, Arunachal Pradesh). Wikipedia gives 3,488 km.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "china",
+   "b": "kazakhstan",
+   "km": 1765.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "china",
+   "b": "kyrgyzstan",
+   "km": 1063.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "china",
+   "b": "laos",
+   "km": 475.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "china",
+   "b": "mongolia",
+   "km": 4630.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "china",
+   "b": "myanmar",
+   "km": 2129.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "china",
+   "b": "nepal",
+   "km": 1389.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "china",
+   "b": "north-korea",
+   "km": 1352.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "china",
+   "b": "pakistan",
+   "km": 438.0,
+   "type": "land",
+   "via": null,
+   "note": "Runs through Gilgit-Baltistan, which India claims.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "china",
+   "b": "russia",
+   "km": 4179.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "china",
+   "b": "tajikistan",
+   "km": 477.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "china",
+   "b": "vietnam",
+   "km": 1297.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "colombia",
+   "b": "ecuador",
+   "km": 708.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "colombia",
+   "b": "panama",
+   "km": 339.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "colombia",
+   "b": "peru",
+   "km": 1494.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "colombia",
+   "b": "venezuela",
+   "km": 2341.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "congo-dr",
+   "b": "congo-republic",
+   "km": 1775.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "congo-dr",
+   "b": "rwanda",
+   "km": 221.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "congo-dr",
+   "b": "south-sudan",
+   "km": 714.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "congo-dr",
+   "b": "tanzania",
+   "km": 479.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "congo-dr",
+   "b": "uganda",
+   "km": 877.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "congo-dr",
+   "b": "zambia",
+   "km": 2332.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "congo-republic",
+   "b": "gabon",
+   "km": 2567.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "costa-rica",
+   "b": "nicaragua",
+   "km": 313.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "costa-rica",
+   "b": "panama",
+   "km": 348.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "croatia",
+   "b": "hungary",
+   "km": 348.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "croatia",
+   "b": "montenegro",
+   "km": 19.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "croatia",
+   "b": "serbia",
+   "km": 314.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "croatia",
+   "b": "slovenia",
+   "km": 600.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "cyprus",
+   "b": "united-kingdom",
+   "km": 156,
+   "type": "via-territory",
+   "via": "Akrotiri and Dhekelia (UK Sovereign Base Areas)",
+   "note": "Akrotiri 48 km + Dhekelia 108 km. Factbook UK entry total (499 km) omits these.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\" (Cyprus, Akrotiri, Dhekelia)"
+  },
+  {
+   "a": "czech-republic",
+   "b": "germany",
+   "km": 704.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "czech-republic",
+   "b": "poland",
+   "km": 699.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "czech-republic",
+   "b": "slovakia",
+   "km": 241.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "denmark",
+   "b": "germany",
+   "km": 140.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "denmark",
+   "b": "sweden",
+   "km": null,
+   "type": "bridge-or-tunnel-only",
+   "via": null,
+   "note": "Øresund Bridge and tunnel (2000); no land boundary.",
+   "src": "Wikipedia \"List of countries and territories by number of land borders\" (Artificial border crossings); Factbook"
+  },
+  {
+   "a": "djibouti",
+   "b": "eritrea",
+   "km": 125.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "djibouti",
+   "b": "ethiopia",
+   "km": 342.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "djibouti",
+   "b": "somalia",
+   "km": 61.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "dominican-republic",
+   "b": "haiti",
+   "km": 376.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "ecuador",
+   "b": "peru",
+   "km": 1529.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "egypt",
+   "b": "israel",
+   "km": 208.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "egypt",
+   "b": "libya",
+   "km": 1115.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "egypt",
+   "b": "palestine",
+   "km": 13,
+   "type": "land",
+   "via": null,
+   "note": "Egypt-Gaza Strip line (Rafah), 13 km (Factbook). De facto boundary of the State of Palestine.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\" (Egypt, Gaza Strip)"
+  },
+  {
+   "a": "egypt",
+   "b": "sudan",
+   "km": 1276.0,
+   "type": "land",
+   "via": null,
+   "note": "Halaib Triangle claimed by both; Bir Tawil claimed by neither.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "el-salvador",
+   "b": "guatemala",
+   "km": 199.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "el-salvador",
+   "b": "honduras",
+   "km": 391.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "equatorial-guinea",
+   "b": "gabon",
+   "km": 345.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "eritrea",
+   "b": "ethiopia",
+   "km": 1033.0,
+   "type": "land",
+   "via": null,
+   "note": "Badme area; 2002 EEBC ruling.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "eritrea",
+   "b": "sudan",
+   "km": 682.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "estonia",
+   "b": "latvia",
+   "km": 333.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "estonia",
+   "b": "russia",
+   "km": 324.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "eswatini",
+   "b": "mozambique",
+   "km": 108.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "eswatini",
+   "b": "south-africa",
+   "km": 438.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "ethiopia",
+   "b": "kenya",
+   "km": 867.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "ethiopia",
+   "b": "somalia",
+   "km": 1640.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "ethiopia",
+   "b": "south-sudan",
+   "km": 1299.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "ethiopia",
+   "b": "sudan",
+   "km": 744.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "finland",
+   "b": "norway",
+   "km": 709.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "finland",
+   "b": "russia",
+   "km": 1309.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "finland",
+   "b": "sweden",
+   "km": 545.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "france",
+   "b": "germany",
+   "km": 418.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "france",
+   "b": "italy",
+   "km": 476.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "france",
+   "b": "luxembourg",
+   "km": 69.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "france",
+   "b": "monaco",
+   "km": 6.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "france",
+   "b": "netherlands",
+   "km": 16,
+   "type": "via-territory",
+   "via": "Saint Martin (FR) / Sint Maarten (NL)",
+   "note": "Island boundary on Saint Martin. Factbook 16 km; Wikipedia 10.2 km. Neither Factbook France nor Netherlands totals include it.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\" (Saint Martin, Sint Maarten); Wikipedia"
+  },
+  {
+   "a": "france",
+   "b": "spain",
+   "km": 646.0,
+   "type": "land",
+   "via": null,
+   "note": "Includes Llívia exclave; Pheasant Island condominium on the Bidasoa.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "france",
+   "b": "suriname",
+   "km": 556,
+   "type": "via-territory",
+   "via": "French Guiana",
+   "note": "Maroni/Lawa river line; Suriname claims the area between the Litani and Marouini headwaters.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\" (Suriname)"
+  },
+  {
+   "a": "france",
+   "b": "switzerland",
+   "km": 525.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "france",
+   "b": "united-kingdom",
+   "km": null,
+   "type": "bridge-or-tunnel-only",
+   "via": null,
+   "note": "Channel Tunnel (1994); no land boundary.",
+   "src": "Wikipedia \"List of countries and territories by number of land borders\" (Artificial border crossings); Factbook"
+  },
+  {
+   "a": "gambia",
+   "b": "senegal",
+   "km": 749.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "georgia",
+   "b": "russia",
+   "km": 894.0,
+   "type": "land",
+   "via": null,
+   "note": "Includes segments along Abkhazia and South Ossetia, under Russian-backed de facto control.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "georgia",
+   "b": "turkey",
+   "km": 273.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "germany",
+   "b": "luxembourg",
+   "km": 128.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "germany",
+   "b": "netherlands",
+   "km": 575.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "germany",
+   "b": "poland",
+   "km": 467,
+   "type": "land",
+   "via": null,
+   "note": "Factbook internal disagreement: Germany entry 447 km, Poland entry 467 km; Wikipedia 456 km; 1951 delimitation act 460.4 km (incl. 19.5 km in inner sea waters). 467 adopted (Poland entry); treat as ±10 km.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\" (Poland); Wikipedia; Dz.U. 1952"
+  },
+  {
+   "a": "germany",
+   "b": "switzerland",
+   "km": 348.0,
+   "type": "land",
+   "via": null,
+   "note": "Includes Büsingen am Hochrhein exclave.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "ghana",
+   "b": "ivory-coast",
+   "km": 720.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "ghana",
+   "b": "togo",
+   "km": 1098.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "greece",
+   "b": "north-macedonia",
+   "km": 234.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "greece",
+   "b": "turkey",
+   "km": 192.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "guatemala",
+   "b": "honduras",
+   "km": 244.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "guatemala",
+   "b": "mexico",
+   "km": 958.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "guinea",
+   "b": "guinea-bissau",
+   "km": 421.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "guinea",
+   "b": "ivory-coast",
+   "km": 816.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "guinea",
+   "b": "liberia",
+   "km": 590.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "guinea",
+   "b": "mali",
+   "km": 1062.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "guinea",
+   "b": "senegal",
+   "km": 363.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "guinea",
+   "b": "sierra-leone",
+   "km": 794.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "guinea-bissau",
+   "b": "senegal",
+   "km": 341.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "guyana",
+   "b": "suriname",
+   "km": 836.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "guyana",
+   "b": "venezuela",
+   "km": 789.0,
+   "type": "land",
+   "via": null,
+   "note": "Venezuela claims the Essequibo region; case before the ICJ.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "honduras",
+   "b": "nicaragua",
+   "km": 940.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "hungary",
+   "b": "romania",
+   "km": 424.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "hungary",
+   "b": "serbia",
+   "km": 164.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "hungary",
+   "b": "slovakia",
+   "km": 627.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "hungary",
+   "b": "slovenia",
+   "km": 94.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "hungary",
+   "b": "ukraine",
+   "km": 128.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "india",
+   "b": "myanmar",
+   "km": 1468.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "india",
+   "b": "nepal",
+   "km": 1770.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "india",
+   "b": "pakistan",
+   "km": 3190.0,
+   "type": "land",
+   "via": null,
+   "note": "Includes the Line of Control in Kashmir (de facto).",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "indonesia",
+   "b": "malaysia",
+   "km": 1881.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "indonesia",
+   "b": "papua-new-guinea",
+   "km": 824.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "indonesia",
+   "b": "timor-leste",
+   "km": 253.0,
+   "type": "land",
+   "via": null,
+   "note": "Includes boundary around the Oecusse exclave.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "iran",
+   "b": "iraq",
+   "km": 1599.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "iran",
+   "b": "pakistan",
+   "km": 959.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "iran",
+   "b": "turkey",
+   "km": 534.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "iran",
+   "b": "turkmenistan",
+   "km": 1148.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "iraq",
+   "b": "jordan",
+   "km": 179.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "iraq",
+   "b": "kuwait",
+   "km": 254.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "iraq",
+   "b": "saudi-arabia",
+   "km": 811.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "iraq",
+   "b": "syria",
+   "km": 599.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "iraq",
+   "b": "turkey",
+   "km": 367.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "ireland",
+   "b": "united-kingdom",
+   "km": 499.0,
+   "type": "land",
+   "via": null,
+   "note": "The only land border between the UK and the EU. Factbook Ireland total says 490 km but lists UK 499 km.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "israel",
+   "b": "jordan",
+   "km": 307,
+   "type": "land",
+   "via": null,
+   "note": "Factbook Jordan 307 km; Israel entry lists 327 km \"20 km are within the Dead Sea\" but its total (1,068) is consistent with 307. 307 adopted.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\" (Jordan, Israel)"
+  },
+  {
+   "a": "israel",
+   "b": "lebanon",
+   "km": 81.0,
+   "type": "land",
+   "via": null,
+   "note": "Blue Line (UN withdrawal line), not an agreed boundary.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "israel",
+   "b": "palestine",
+   "km": 389,
+   "type": "disputed",
+   "via": null,
+   "note": "West Bank 330 km + Gaza Strip 59 km (Factbook). Green Line / 1949 armistice lines and Gaza perimeter; not a final agreed international boundary; Israel occupies the West Bank.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\" (Israel, West Bank, Gaza Strip entries)"
+  },
+  {
+   "a": "israel",
+   "b": "syria",
+   "km": 83.0,
+   "type": "land",
+   "via": null,
+   "note": "Golan Heights occupied by Israel since 1967.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "italy",
+   "b": "san-marino",
+   "km": 37.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "italy",
+   "b": "slovenia",
+   "km": 218.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "italy",
+   "b": "switzerland",
+   "km": 698.0,
+   "type": "land",
+   "via": null,
+   "note": "Includes Campione d'Italia exclave.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "italy",
+   "b": "vatican-city",
+   "km": 3.4,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "ivory-coast",
+   "b": "liberia",
+   "km": 778.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "ivory-coast",
+   "b": "mali",
+   "km": 599.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "jordan",
+   "b": "palestine",
+   "km": 148,
+   "type": "land",
+   "via": null,
+   "note": "Jordan River / Dead Sea line with the West Bank (Factbook). De facto boundary; crossing controlled by Israel.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\" (Jordan, West Bank)"
+  },
+  {
+   "a": "jordan",
+   "b": "saudi-arabia",
+   "km": 731.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "jordan",
+   "b": "syria",
+   "km": 379.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "kazakhstan",
+   "b": "kyrgyzstan",
+   "km": 1212.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "kazakhstan",
+   "b": "russia",
+   "km": 7644.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "kazakhstan",
+   "b": "turkmenistan",
+   "km": 413.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "kazakhstan",
+   "b": "uzbekistan",
+   "km": 2330.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "kenya",
+   "b": "somalia",
+   "km": 684.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "kenya",
+   "b": "south-sudan",
+   "km": 317.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "kenya",
+   "b": "tanzania",
+   "km": 775.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "kenya",
+   "b": "uganda",
+   "km": 814.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "kosovo",
+   "b": "montenegro",
+   "km": 76.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "kosovo",
+   "b": "north-macedonia",
+   "km": 160.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "kosovo",
+   "b": "serbia",
+   "km": 366.0,
+   "type": "disputed",
+   "via": null,
+   "note": "Kosovo declared independence 2008; Serbia does not recognise it and regards this as an administrative line. De facto boundary.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\" (Kosovo, Serbia)"
+  },
+  {
+   "a": "kuwait",
+   "b": "saudi-arabia",
+   "km": 221.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "kyrgyzstan",
+   "b": "tajikistan",
+   "km": 984.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "kyrgyzstan",
+   "b": "uzbekistan",
+   "km": 1314.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "laos",
+   "b": "myanmar",
+   "km": 238.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "laos",
+   "b": "thailand",
+   "km": 1845.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "laos",
+   "b": "vietnam",
+   "km": 2161.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "latvia",
+   "b": "lithuania",
+   "km": 544.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "latvia",
+   "b": "russia",
+   "km": 332.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "lebanon",
+   "b": "syria",
+   "km": 403.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "lesotho",
+   "b": "south-africa",
+   "km": 1106.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "liberia",
+   "b": "sierra-leone",
+   "km": 299.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "libya",
+   "b": "niger",
+   "km": 342.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "libya",
+   "b": "sudan",
+   "km": 382.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "libya",
+   "b": "tunisia",
+   "km": 461.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "liechtenstein",
+   "b": "switzerland",
+   "km": 41.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "lithuania",
+   "b": "poland",
+   "km": 100.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "lithuania",
+   "b": "russia",
+   "km": 261.0,
+   "type": "via-territory",
+   "via": "Kaliningrad Oblast",
+   "note": "Entire border is with the Kaliningrad exclave.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "malawi",
+   "b": "mozambique",
+   "km": 1498.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "malawi",
+   "b": "tanzania",
+   "km": 512.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "malawi",
+   "b": "zambia",
+   "km": 847.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "malaysia",
+   "b": "singapore",
+   "km": null,
+   "type": "bridge-or-tunnel-only",
+   "via": null,
+   "note": "Johor-Singapore Causeway and Second Link; no land boundary.",
+   "src": "Wikipedia \"List of countries and territories by number of land borders\" (Artificial border crossings); Factbook"
+  },
+  {
+   "a": "malaysia",
+   "b": "thailand",
+   "km": 595.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "mali",
+   "b": "mauritania",
+   "km": 2236.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "mali",
+   "b": "niger",
+   "km": 838.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "mali",
+   "b": "senegal",
+   "km": 489.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "mauritania",
+   "b": "morocco",
+   "km": 1564.0,
+   "type": "disputed",
+   "via": "Western Sahara",
+   "note": "The 1,564 km is the Western Sahara-Mauritania line, attributed to Morocco by the Factbook Morocco entry; sovereignty over Western Sahara is disputed (Polisario/SADR). Morocco proper does not touch Mauritania.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\" (Morocco, Mauritania, Western Sahara)"
+  },
+  {
+   "a": "mauritania",
+   "b": "senegal",
+   "km": 742.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "mexico",
+   "b": "united-states",
+   "km": 3145,
+   "type": "land",
+   "via": null,
+   "note": "IBWC: 1,954 mi (3,145 km) land boundary. Factbook US entry 3,111 km, Mexico entry 3,155 km; Wikipedia 3,141 km. IBWC figure adopted.",
+   "src": "International Boundary and Water Commission (ibwc.gov/about-us); Factbook"
+  },
+  {
+   "a": "moldova",
+   "b": "romania",
+   "km": 683.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "moldova",
+   "b": "ukraine",
+   "km": 1202.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "mongolia",
+   "b": "russia",
+   "km": 3452.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "montenegro",
+   "b": "serbia",
+   "km": 157.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "morocco",
+   "b": "spain",
+   "km": 18.575,
+   "type": "via-territory",
+   "via": "Ceuta, Melilla, Peñón de Vélez de la Gomera",
+   "note": "Ceuta 8 km + Melilla 10.5 km + Peñón de Vélez ~75 m (Factbook note; Wikipedia article says 85 m). Morocco claims all three.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\" (Spain, Morocco)"
+  },
+  {
+   "a": "mozambique",
+   "b": "south-africa",
+   "km": 496.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "mozambique",
+   "b": "tanzania",
+   "km": 840.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "mozambique",
+   "b": "zambia",
+   "km": 439.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "mozambique",
+   "b": "zimbabwe",
+   "km": 1402.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "myanmar",
+   "b": "thailand",
+   "km": 2416.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "namibia",
+   "b": "south-africa",
+   "km": 1005.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "namibia",
+   "b": "zambia",
+   "km": 244.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "niger",
+   "b": "nigeria",
+   "km": 1608.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "north-korea",
+   "b": "russia",
+   "km": 18.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "north-korea",
+   "b": "south-korea",
+   "km": 237.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "north-macedonia",
+   "b": "serbia",
+   "km": 101.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "norway",
+   "b": "russia",
+   "km": 191.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "norway",
+   "b": "sweden",
+   "km": 1666.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "oman",
+   "b": "saudi-arabia",
+   "km": 658.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "oman",
+   "b": "united-arab-emirates",
+   "km": 609.0,
+   "type": "land",
+   "via": null,
+   "note": "Includes Musandam exclave and Madha enclave boundaries.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "oman",
+   "b": "yemen",
+   "km": 294.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "poland",
+   "b": "russia",
+   "km": 209.0,
+   "type": "via-territory",
+   "via": "Kaliningrad Oblast",
+   "note": "Entire border is with the Kaliningrad exclave.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "poland",
+   "b": "slovakia",
+   "km": 517.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "poland",
+   "b": "ukraine",
+   "km": 498.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "portugal",
+   "b": "spain",
+   "km": 1224.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "qatar",
+   "b": "saudi-arabia",
+   "km": 87.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "romania",
+   "b": "serbia",
+   "km": 531.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "romania",
+   "b": "ukraine",
+   "km": 601.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "russia",
+   "b": "ukraine",
+   "km": 1944.0,
+   "type": "land",
+   "via": null,
+   "note": "Internationally recognised line; large areas of Ukraine occupied by Russia since 2014/2022.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "rwanda",
+   "b": "tanzania",
+   "km": 222.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "rwanda",
+   "b": "uganda",
+   "km": 172.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "saudi-arabia",
+   "b": "united-arab-emirates",
+   "km": 457.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "saudi-arabia",
+   "b": "yemen",
+   "km": 1307.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "slovakia",
+   "b": "ukraine",
+   "km": 97.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "south-africa",
+   "b": "zimbabwe",
+   "km": 230.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "south-sudan",
+   "b": "sudan",
+   "km": 2158.0,
+   "type": "land",
+   "via": null,
+   "note": "Abyei area and other segments disputed.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "south-sudan",
+   "b": "uganda",
+   "km": 475.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "spain",
+   "b": "united-kingdom",
+   "km": 1.2,
+   "type": "via-territory",
+   "via": "Gibraltar",
+   "note": "Gibraltar isthmus line; Spain claims sovereignty over Gibraltar.",
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\" (Spain, Gibraltar)"
+  },
+  {
+   "a": "syria",
+   "b": "turkey",
+   "km": 899.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "tajikistan",
+   "b": "uzbekistan",
+   "km": 1312.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "tanzania",
+   "b": "uganda",
+   "km": 391.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "tanzania",
+   "b": "zambia",
+   "km": 353.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "turkmenistan",
+   "b": "uzbekistan",
+   "km": 1793.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  },
+  {
+   "a": "zambia",
+   "b": "zimbabwe",
+   "km": 763.0,
+   "type": "land",
+   "via": null,
+   "note": null,
+   "src": "CIA World Factbook (Jan-2026 edition, factbook.json mirror) \"Land boundaries\""
+  }
+ ],
+ "anomalies": [
+  {
+   "kind": "enclave",
+   "title": "Baarle-Hertog / Baarle-Nassau",
+   "entities": [
+    "belgium",
+    "netherlands"
+   ],
+   "fact": "Baarle-Hertog consists of 22 Belgian enclaves inside the Netherlands; Baarle-Nassau has 7 Dutch counter-enclaves inside them plus 1 enclave in Belgium, giving the Belgium–Netherlands boundary about 31 separate segments.",
+   "src": "Wikipedia \"Baarle-Hertog\"; Wikipedia \"List of countries and territories by number of land borders\""
+  },
+  {
+   "kind": "enclave",
+   "title": "Vennbahn enclaves",
+   "entities": [
+    "germany",
+    "belgium"
+   ],
+   "fact": "The trackbed of the former Vennbahn railway is Belgian territory, cutting off five small German enclaves between Roetgen and Monschau, so Belgium and Germany share six separate boundary segments.",
+   "src": "Wikipedia \"Vennbahn\""
+  },
+  {
+   "kind": "double-enclave",
+   "title": "Madha and Nahwa",
+   "entities": [
+    "oman",
+    "united-arab-emirates"
+   ],
+   "fact": "Madha is an Omani exclave (~75 km²) surrounded by the UAE, and inside it lies Nahwa, a UAE counter-enclave, so it is an enclave within an enclave.",
+   "src": "Wikipedia \"Madha\"; Wikipedia \"Nahwa\""
+  },
+  {
+   "kind": "exclave",
+   "title": "Büsingen am Hochrhein",
+   "entities": [
+    "germany",
+    "switzerland"
+   ],
+   "fact": "A German municipality of about 7.6 km² entirely surrounded by Switzerland. It is part of the Swiss customs area and uses the Swiss franc in practice.",
+   "src": "Wikipedia \"Büsingen am Hochrhein\""
+  },
+  {
+   "kind": "exclave",
+   "title": "Campione d'Italia",
+   "entities": [
+    "italy",
+    "switzerland"
+   ],
+   "fact": "An Italian exclave of ~2.7 km² on Lake Lugano, entirely surrounded by the Swiss canton of Ticino.",
+   "src": "Wikipedia \"Campione d'Italia\""
+  },
+  {
+   "kind": "exclave",
+   "title": "Llívia",
+   "entities": [
+    "spain",
+    "france"
+   ],
+   "fact": "A Spanish town of ~12.8 km² entirely surrounded by France. It stayed Spanish after the 1659 Treaty of the Pyrenees because it was a \"town\" and not one of the ceded \"villages\".",
+   "src": "Wikipedia \"Llívia\""
+  },
+  {
+   "kind": "exclave",
+   "title": "Kaliningrad Oblast",
+   "entities": [
+    "russia",
+    "poland",
+    "lithuania"
+   ],
+   "fact": "Russia's semi-exclave on the Baltic, cut off from the rest of Russia by Lithuania and Poland. Russia's whole border with each of them runs along Kaliningrad (Factbook: Lithuania 261 km, Poland 209 km).",
+   "src": "CIA World Factbook (Jan 2026) (Russia)"
+  },
+  {
+   "kind": "exclave",
+   "title": "Nakhchivan",
+   "entities": [
+    "azerbaijan",
+    "armenia",
+    "iran",
+    "turkey"
+   ],
+   "fact": "Azerbaijan's autonomous republic, separated from the rest of Azerbaijan by Armenia. It also gives Azerbaijan its only border with Turkey (Factbook 17 km; Wikipedia 9 km).",
+   "src": "CIA World Factbook (Jan 2026) (Azerbaijan); Wikipedia \"Nakhchivan Autonomous Republic\""
+  },
+  {
+   "kind": "exclave",
+   "title": "Cabinda",
+   "entities": [
+    "angola",
+    "congo-dr",
+    "congo-republic"
+   ],
+   "fact": "Angola's Cabinda Province is separated from the rest of Angola by a strip of DRC territory reaching the Atlantic. Angola's entire 231 km border with the Republic of the Congo, and 225 km of its border with the DRC, belong to Cabinda.",
+   "src": "CIA World Factbook (Jan 2026) (Angola)"
+  },
+  {
+   "kind": "exclave",
+   "title": "Musandam",
+   "entities": [
+    "oman",
+    "united-arab-emirates"
+   ],
+   "fact": "The Musandam Peninsula on the Strait of Hormuz is an Omani exclave, separated from the rest of Oman by the UAE.",
+   "src": "Wikipedia \"Musandam Governorate\""
+  },
+  {
+   "kind": "exclave",
+   "title": "Alaska",
+   "entities": [
+    "united-states",
+    "canada"
+   ],
+   "fact": "The largest US state by area is not contiguous with the rest of the country. Its only land neighbour is Canada, along 2,475 km of the 8,891 km Canada–US boundary.",
+   "src": "CIA World Factbook (Jan 2026) (United States, Canada)"
+  },
+  {
+   "kind": "exclave",
+   "title": "Point Roberts",
+   "entities": [
+    "united-states",
+    "canada"
+   ],
+   "fact": "The tip of the Tsawwassen peninsula south of the 49th parallel is part of Washington State, but it can only be reached by land through British Columbia.",
+   "src": "Wikipedia \"Point Roberts, Washington\""
+  },
+  {
+   "kind": "exclave",
+   "title": "Northwest Angle",
+   "entities": [
+    "united-states",
+    "canada"
+   ],
+   "fact": "The only part of the contiguous US north of the 49th parallel (Minnesota). It is reachable by land only through Manitoba, a result of a mapping error in the 1783 Treaty of Paris.",
+   "src": "Wikipedia \"Northwest Angle\""
+  },
+  {
+   "kind": "exclave",
+   "title": "Ceuta and Melilla",
+   "entities": [
+    "spain",
+    "morocco"
+   ],
+   "fact": "Two Spanish autonomous cities on the African mainland (Factbook land boundaries: Ceuta 8 km, Melilla 10.5 km). They are the EU's only land borders in Africa, and Morocco claims both.",
+   "src": "CIA World Factbook (Jan 2026) (Spain, Morocco)"
+  },
+  {
+   "kind": "shortest",
+   "title": "Peñón de Vélez de la Gomera",
+   "entities": [
+    "spain",
+    "morocco"
+   ],
+   "fact": "This Spanish rock was joined to the Moroccan coast by a sand isthmus in 1930 (some sources say 1934). The result is the world's shortest single land-border segment: 75 m per the Factbook, 85 m per Wikipedia's article, with 80–81 m in other sources.",
+   "src": "CIA World Factbook (Jan 2026) (Spain, note); Wikipedia \"Peñón de Vélez de la Gomera\""
+  },
+  {
+   "kind": "shortest",
+   "title": "Botswana–Zambia at Kazungula",
+   "entities": [
+    "botswana",
+    "zambia"
+   ],
+   "fact": "The shortest complete border between two countries is about 150 m across the Zambezi (Factbook 0.15 km). Since 2021 it has been crossed by the Kazungula Bridge.",
+   "src": "CIA World Factbook (Jan 2026) (Botswana, Zambia); Wikipedia \"Kazungula Bridge\""
+  },
+  {
+   "kind": "quadripoint/tripoint",
+   "title": "Kazungula near-quadripoint",
+   "entities": [
+    "botswana",
+    "zambia",
+    "namibia",
+    "zimbabwe"
+   ],
+   "fact": "Botswana, Namibia, Zambia and Zimbabwe come within roughly 150 m of one another. The point was long described as the world's only quadripoint, but it actually consists of two tripoints joined by the short Botswana–Zambia boundary.",
+   "src": "Wikipedia \"Quadripoint\""
+  },
+  {
+   "kind": "other",
+   "title": "Spain–Portugal, one of the oldest borders",
+   "entities": [
+    "spain",
+    "portugal"
+   ],
+   "fact": "The Spain–Portugal boundary (Factbook 1,224 km) dates largely from the 1297 Treaty of Alcañices and is often called the oldest unchanged border in Europe. Olivenza/Olivença is still disputed.",
+   "src": "Wikipedia \"Portugal–Spain border\"; CIA World Factbook (Jan 2026)"
+  },
+  {
+   "kind": "longest",
+   "title": "Canada–United States",
+   "entities": [
+    "canada",
+    "united-states"
+   ],
+   "fact": "The longest international land border: 8,891 km per the Factbook, of which 2,475 km is with Alaska. The longest single continuous segment is Kazakhstan–Russia (7,644 km per the Factbook).",
+   "src": "CIA World Factbook (Jan 2026) (Canada, United States)"
+  },
+  {
+   "kind": "surrounded",
+   "title": "Lesotho",
+   "entities": [
+    "lesotho",
+    "south-africa"
+   ],
+   "fact": "Lesotho is entirely surrounded by South Africa (1,106 km). It is the largest of the world's three enclaved sovereign states and the only one outside Italy.",
+   "src": "CIA World Factbook (Jan 2026) (Lesotho)"
+  },
+  {
+   "kind": "surrounded",
+   "title": "Vatican City",
+   "entities": [
+    "vatican-city",
+    "italy"
+   ],
+   "fact": "The smallest sovereign state, entirely surrounded by Rome, Italy, with a 3.4 km boundary (Factbook; Wikipedia gives 3.2 km).",
+   "src": "CIA World Factbook (Jan 2026) (Holy See)"
+  },
+  {
+   "kind": "surrounded",
+   "title": "San Marino",
+   "entities": [
+    "san-marino",
+    "italy"
+   ],
+   "fact": "San Marino is entirely surrounded by Italy (37 km). Together with Vatican City and Lesotho it is one of only three enclaved sovereign states.",
+   "src": "CIA World Factbook (Jan 2026) (San Marino)"
+  },
+  {
+   "kind": "condominium",
+   "title": "Pheasant Island",
+   "entities": [
+    "spain",
+    "france"
+   ],
+   "fact": "An uninhabited island in the Bidasoa river, a Franco-Spanish condominium since the 1659 Treaty of the Pyrenees. Administration alternates between the two countries every six months.",
+   "src": "Wikipedia \"Pheasant Island\""
+  },
+  {
+   "kind": "island-shared",
+   "title": "Saint Martin",
+   "entities": [
+    "france",
+    "netherlands"
+   ],
+   "fact": "France (Saint-Martin) and the Netherlands (Sint Maarten) have shared this Caribbean island since the 1648 Treaty of Concordia. The boundary is 16 km per the Factbook and 10.2 km per Wikipedia.",
+   "src": "CIA World Factbook (Jan 2026) (Saint Martin, Sint Maarten)"
+  },
+  {
+   "kind": "island-shared",
+   "title": "Hispaniola",
+   "entities": [
+    "haiti",
+    "dominican-republic"
+   ],
+   "fact": "Haiti and the Dominican Republic share Hispaniola (376 km boundary). They form their own two-node component of the contiguous land graph.",
+   "src": "CIA World Factbook (Jan 2026) (Haiti)"
+  },
+  {
+   "kind": "island-shared",
+   "title": "Timor",
+   "entities": [
+    "timor-leste",
+    "indonesia"
+   ],
+   "fact": "Timor-Leste and Indonesia (West Timor) share the island of Timor (253 km). Timor-Leste's Oecusse district is an exclave surrounded by Indonesia on land.",
+   "src": "CIA World Factbook (Jan 2026) (Timor-Leste); Wikipedia \"Oecusse\""
+  },
+  {
+   "kind": "island-shared",
+   "title": "New Guinea",
+   "entities": [
+    "papua-new-guinea",
+    "indonesia"
+   ],
+   "fact": "Papua New Guinea and Indonesia split New Guinea along a mostly straight 141°E meridian line with a Fly River bulge (824 km).",
+   "src": "CIA World Factbook (Jan 2026) (Papua New Guinea)"
+  },
+  {
+   "kind": "island-shared",
+   "title": "Borneo",
+   "entities": [
+    "indonesia",
+    "malaysia",
+    "brunei"
+   ],
+   "fact": "Borneo is the only island divided among three sovereign states. Brunei (266 km with Malaysia) is itself split in two by the Malaysian Limbang district.",
+   "src": "CIA World Factbook (Jan 2026); Wikipedia \"Borneo\""
+  },
+  {
+   "kind": "island-shared",
+   "title": "Ireland",
+   "entities": [
+    "ireland",
+    "united-kingdom"
+   ],
+   "fact": "Ireland and the UK share the island of Ireland (499 km). Since Brexit this has been the only land border between the UK and the EU.",
+   "src": "CIA World Factbook (Jan 2026) (United Kingdom)"
+  },
+  {
+   "kind": "other",
+   "title": "Bir Tawil, terra nullius",
+   "entities": [
+    "egypt",
+    "sudan"
+   ],
+   "fact": "Because the 1899 and 1902 Egypt–Sudan lines differ, both countries claim the Halaib Triangle, and neither claims the ~2,060 km² Bir Tawil. It is among the few unclaimed lands on Earth.",
+   "src": "Wikipedia \"Bir Tawil\""
+  },
+  {
+   "kind": "island-shared",
+   "title": "Hans Island (Tartupaluk)",
+   "entities": [
+    "greenland",
+    "canada"
+   ],
+   "fact": "Canada and Denmark/Greenland settled the 'Whisky War' with an agreement signed on 14 June 2022 that splits the 1.3 km² island and creates a ~1.3 km land boundary. Greenland's Factbook entry still lists 0 km.",
+   "src": "CIA World Factbook (Jan 2026) (Canada, Denmark); news reports 14–15 Jun 2022 (NBC/AP)"
+  },
+  {
+   "kind": "other",
+   "title": "Doubly landlocked: Liechtenstein and Uzbekistan",
+   "entities": [
+    "liechtenstein",
+    "uzbekistan"
+   ],
+   "fact": "These are the only two countries surrounded entirely by landlocked countries, so reaching the sea means crossing at least two borders.",
+   "src": "CIA World Factbook (Jan 2026) (World, Land boundaries note 1)"
+  },
+  {
+   "kind": "enclave",
+   "title": "Dahala Khagrabari (historic)",
+   "entities": [
+    "india",
+    "bangladesh"
+   ],
+   "fact": "Historic: this was the world's only third-order enclave, an Indian enclave inside a Bangladeshi enclave inside an Indian enclave inside Bangladesh. It was transferred to Bangladesh on 31 Jul / 1 Aug 2015 under the 2015 Land Boundary Agreement, which exchanged all 162 Cooch Behar enclaves.",
+   "src": "Wikipedia \"Dahala Khagrabari\"; Wikipedia \"India–Bangladesh enclaves\""
+  },
+  {
+   "kind": "overseas-land-border",
+   "title": "Gibraltar",
+   "entities": [
+    "united-kingdom",
+    "spain"
+   ],
+   "fact": "A British Overseas Territory with a 1.2 km land border with Spain across the isthmus. Spain claims sovereignty, and a UK–EU treaty on Gibraltar's border was negotiated in 2025.",
+   "src": "CIA World Factbook (Jan 2026) (Gibraltar)"
+  },
+  {
+   "kind": "overseas-land-border",
+   "title": "Akrotiri and Dhekelia",
+   "entities": [
+    "united-kingdom",
+    "cyprus"
+   ],
+   "fact": "The UK Sovereign Base Areas on Cyprus have land borders of 48 km (Akrotiri) and 108 km (Dhekelia). Dhekelia surrounds the Cypriot villages of Ormideia and Xylotymbou and also touches the UN buffer zone.",
+   "src": "CIA World Factbook (Jan 2026) (Akrotiri, Dhekelia); Wikipedia \"Akrotiri and Dhekelia\""
+  },
+  {
+   "kind": "overseas-land-border",
+   "title": "France's longest border is with Brazil",
+   "entities": [
+    "france",
+    "brazil",
+    "suriname"
+   ],
+   "fact": "Through French Guiana, France's border with Brazil (Factbook 649 km; Wikipedia 673 km) is longer than its border with Spain (646 km / 623 km). France therefore borders 11 entities here, more than any European country except Russia.",
+   "src": "CIA World Factbook (Jan 2026) (Brazil, France)"
+  },
+  {
+   "kind": "most-neighbours",
+   "title": "China and Russia: 14 neighbours each",
+   "entities": [
+    "china",
+    "russia"
+   ],
+   "fact": "The Factbook notes that China and Russia each border 14 countries. In this graph China has 15 because Hong Kong is a separate entity (16 if Macau were counted). Russia would have 16 if Abkhazia and South Ossetia were counted.",
+   "src": "CIA World Factbook (Jan 2026) (World, note 3); Wikipedia \"List of countries and territories by number of land borders\""
+  },
+  {
+   "kind": "disputed",
+   "title": "Kosovo–Serbia",
+   "entities": [
+    "kosovo",
+    "serbia"
+   ],
+   "fact": "Serbia treats the 366 km line as an administrative boundary and still claims a border with Albania through Kosovo. In this graph Serbia keeps direct edges to North Macedonia (101 km) and Montenegro (157 km) but has no edge to Albania.",
+   "src": "CIA World Factbook (Jan 2026) (Kosovo, Serbia)"
+  },
+  {
+   "kind": "disputed",
+   "title": "Western Sahara",
+   "entities": [
+    "morocco",
+    "mauritania",
+    "algeria"
+   ],
+   "fact": "The Factbook assigns the 1,564 km Western Sahara–Mauritania line to Morocco, while Wikipedia lists Western Sahara separately. Western Sahara's status is unresolved, so this edge is typed disputed.",
+   "src": "CIA World Factbook (Jan 2026) (Morocco, Western Sahara)"
+  },
+  {
+   "kind": "other",
+   "title": "Guantánamo Bay",
+   "entities": [
+    "cuba",
+    "united-states"
+   ],
+   "fact": "The US naval base has a 28.5 km perimeter, but the Factbook states that the leased base remains part of Cuba. It is not counted as a US–Cuba land border here, although Wikipedia lists one.",
+   "src": "CIA World Factbook (Jan 2026) (Cuba, United States)"
+  },
+  {
+   "kind": "single-neighbour",
+   "title": "The Gambia",
+   "entities": [
+    "gambia",
+    "senegal"
+   ],
+   "fact": "The Gambia is surrounded by Senegal (749 km) on every side except a short Atlantic coast.",
+   "src": "CIA World Factbook (Jan 2026) (The Gambia)"
+  },
+  {
+   "kind": "enclave",
+   "title": "Fergana Valley enclaves",
+   "entities": [
+    "uzbekistan",
+    "kyrgyzstan",
+    "tajikistan"
+   ],
+   "fact": "Uzbekistan's Sokh and Shakhimardan and Tajikistan's Vorukh are enclaves inside Kyrgyzstan. Wikipedia counts 6 separate Kyrgyzstan–Uzbekistan boundary segments.",
+   "src": "Wikipedia \"Sokh District\"; Wikipedia \"Vorukh\"; Wikipedia \"List of countries and territories by number of land borders\""
+  },
+  {
+   "kind": "other",
+   "title": "Passport Island (King Fahd Causeway)",
+   "entities": [
+    "saudi-arabia",
+    "bahrain"
+   ],
+   "fact": "Saudi Arabia and Bahrain meet on an artificial island in the middle of the causeway (~196 m boundary per Wikipedia). The Factbook lists Bahrain with 0 km of land border, so the edge is typed bridge-or-tunnel-only.",
+   "src": "Wikipedia \"List of countries and territories by number of land borders\"; CIA World Factbook (Jan 2026) (Bahrain)"
+  },
+  {
+   "kind": "quadripoint/tripoint",
+   "title": "Triple Frontier",
+   "entities": [
+    "argentina",
+    "brazil",
+    "paraguay"
+   ],
+   "fact": "The Argentina–Brazil–Paraguay tripoint lies where the Iguazu River meets the Paraná, and each country marks it with an obelisk in its colours.",
+   "src": "Wikipedia \"Triple Frontier\""
+  },
+  {
+   "kind": "other",
+   "title": "Artsvashen and the Azerbaijani enclaves in Armenia",
+   "entities": [
+    "armenia",
+    "azerbaijan"
+   ],
+   "fact": "Armenia's Artsvashen exclave inside Azerbaijan and Azerbaijani exclaves inside Armenia (Karki, Yukhari Askipara, Barkhudarly) give the Armenia–Azerbaijan boundary 6 segments, per Wikipedia. Each side has controlled the other's enclaves since 1992.",
+   "src": "Wikipedia \"Artsvashen\"; Wikipedia \"List of countries and territories by number of land borders\""
+  }
+ ],
+ "islands": [
+  "antigua-and-barbuda",
+  "australia",
+  "bahamas",
+  "bahrain",
+  "barbados",
+  "cabo-verde",
+  "comoros",
+  "cuba",
+  "dominica",
+  "faroe-islands",
+  "fiji",
+  "french-polynesia",
+  "grenada",
+  "iceland",
+  "jamaica",
+  "japan",
+  "kiribati",
+  "madagascar",
+  "maldives",
+  "malta",
+  "marshall-islands",
+  "mauritius",
+  "micronesia",
+  "nauru",
+  "new-caledonia",
+  "new-zealand",
+  "palau",
+  "philippines",
+  "puerto-rico",
+  "saint-kitts-and-nevis",
+  "saint-lucia",
+  "saint-vincent-and-the-grenadines",
+  "samoa",
+  "sao-tome-and-principe",
+  "seychelles",
+  "singapore",
+  "solomon-islands",
+  "sri-lanka",
+  "taiwan",
+  "tonga",
+  "trinidad-and-tobago",
+  "tuvalu",
+  "vanuatu"
+ ],
+ "checks": {
+  "source_edition": "CIA World Factbook via github.com/factbook/factbook.json (last auto-update 2026-01-22; the Factbook ceased updates in early 2026). Cross-check: Wikipedia \"List of countries and territories by number of land borders\" revid 1379576201 (section tagged unreferenced May 2026 — used for topology only).",
+  "edge_count_total": 327,
+  "edge_count_by_type": {
+   "land": 310,
+   "via-territory": 10,
+   "bridge-or-tunnel-only": 4,
+   "disputed": 3
+  },
+  "land_graph_edge_count": 323,
+  "invalid_endpoint_edges": [],
+  "duplicate_pairs": 0,
+  "symmetric_one_record_per_pair": true,
+  "land_edges_with_null_km": [],
+  "degree": {
+   "japan": 0,
+   "south-korea": 1,
+   "china": 15,
+   "india": 6,
+   "united-states": 2,
+   "germany": 9,
+   "brazil": 10,
+   "russia": 14,
+   "australia": 0,
+   "canada": 2,
+   "iceland": 0,
+   "singapore": 0,
+   "united-kingdom": 3,
+   "france": 11,
+   "nigeria": 4,
+   "egypt": 4,
+   "indonesia": 3,
+   "switzerland": 5,
+   "new-zealand": 0,
+   "taiwan": 0,
+   "hong-kong": 1,
+   "greenland": 1,
+   "puerto-rico": 0,
+   "palestine": 3,
+   "kosovo": 4,
+   "faroe-islands": 0,
+   "french-polynesia": 0,
+   "new-caledonia": 0,
+   "algeria": 6,
+   "angola": 4,
+   "benin": 4,
+   "botswana": 4,
+   "burkina-faso": 6,
+   "burundi": 3,
+   "cabo-verde": 0,
+   "cameroon": 6,
+   "central-african-republic": 6,
+   "chad": 6,
+   "comoros": 0,
+   "congo-republic": 5,
+   "congo-dr": 9,
+   "djibouti": 3,
+   "equatorial-guinea": 2,
+   "eritrea": 3,
+   "eswatini": 2,
+   "ethiopia": 6,
+   "gabon": 3,
+   "gambia": 1,
+   "ghana": 3,
+   "guinea": 6,
+   "guinea-bissau": 2,
+   "ivory-coast": 5,
+   "kenya": 5,
+   "lesotho": 1,
+   "liberia": 3,
+   "libya": 6,
+   "madagascar": 0,
+   "malawi": 3,
+   "mali": 7,
+   "mauritania": 4,
+   "mauritius": 0,
+   "morocco": 3,
+   "mozambique": 6,
+   "namibia": 4,
+   "niger": 7,
+   "rwanda": 4,
+   "sao-tome-and-principe": 0,
+   "senegal": 5,
+   "seychelles": 0,
+   "sierra-leone": 2,
+   "somalia": 3,
+   "south-africa": 6,
+   "south-sudan": 6,
+   "sudan": 7,
+   "tanzania": 8,
+   "togo": 3,
+   "tunisia": 2,
+   "uganda": 5,
+   "zambia": 8,
+   "zimbabwe": 4,
+   "afghanistan": 6,
+   "armenia": 4,
+   "azerbaijan": 5,
+   "bahrain": 0,
+   "bangladesh": 2,
+   "bhutan": 2,
+   "brunei": 1,
+   "cambodia": 3,
+   "cyprus": 1,
+   "georgia": 4,
+   "iran": 7,
+   "iraq": 6,
+   "israel": 5,
+   "jordan": 5,
+   "kazakhstan": 5,
+   "kuwait": 2,
+   "kyrgyzstan": 4,
+   "laos": 5,
+   "lebanon": 2,
+   "malaysia": 3,
+   "maldives": 0,
+   "mongolia": 2,
+   "myanmar": 5,
+   "nepal": 2,
+   "north-korea": 3,
+   "oman": 3,
+   "pakistan": 4,
+   "philippines": 0,
+   "qatar": 1,
+   "saudi-arabia": 7,
+   "sri-lanka": 0,
+   "syria": 5,
+   "tajikistan": 4,
+   "thailand": 4,
+   "timor-leste": 1,
+   "turkey": 8,
+   "turkmenistan": 4,
+   "united-arab-emirates": 2,
+   "uzbekistan": 5,
+   "vietnam": 3,
+   "yemen": 2,
+   "albania": 4,
+   "andorra": 2,
+   "austria": 8,
+   "belarus": 5,
+   "belgium": 4,
+   "bosnia-and-herzegovina": 3,
+   "bulgaria": 5,
+   "croatia": 5,
+   "czech-republic": 4,
+   "denmark": 1,
+   "estonia": 2,
+   "finland": 3,
+   "greece": 4,
+   "hungary": 7,
+   "ireland": 1,
+   "italy": 6,
+   "latvia": 4,
+   "liechtenstein": 2,
+   "lithuania": 4,
+   "luxembourg": 3,
+   "malta": 0,
+   "moldova": 2,
+   "monaco": 1,
+   "montenegro": 5,
+   "netherlands": 3,
+   "north-macedonia": 5,
+   "norway": 3,
+   "poland": 7,
+   "portugal": 1,
+   "romania": 5,
+   "san-marino": 1,
+   "serbia": 8,
+   "slovakia": 5,
+   "slovenia": 4,
+   "spain": 5,
+   "sweden": 2,
+   "ukraine": 7,
+   "vatican-city": 1,
+   "antigua-and-barbuda": 0,
+   "bahamas": 0,
+   "barbados": 0,
+   "belize": 2,
+   "costa-rica": 2,
+   "cuba": 0,
+   "dominica": 0,
+   "dominican-republic": 1,
+   "el-salvador": 2,
+   "grenada": 0,
+   "guatemala": 4,
+   "haiti": 1,
+   "honduras": 3,
+   "jamaica": 0,
+   "mexico": 3,
+   "nicaragua": 2,
+   "panama": 2,
+   "saint-kitts-and-nevis": 0,
+   "saint-lucia": 0,
+   "saint-vincent-and-the-grenadines": 0,
+   "trinidad-and-tobago": 0,
+   "argentina": 5,
+   "bolivia": 5,
+   "chile": 3,
+   "colombia": 5,
+   "ecuador": 2,
+   "guyana": 3,
+   "paraguay": 3,
+   "peru": 5,
+   "suriname": 3,
+   "uruguay": 2,
+   "venezuela": 3,
+   "fiji": 0,
+   "kiribati": 0,
+   "marshall-islands": 0,
+   "micronesia": 0,
+   "nauru": 0,
+   "palau": 0,
+   "papua-new-guinea": 1,
+   "samoa": 0,
+   "solomon-islands": 0,
+   "tonga": 0,
+   "tuvalu": 0,
+   "vanuatu": 0
+  },
+  "top_by_degree": [
+   [
+    "china",
+    15
+   ],
+   [
+    "russia",
+    14
+   ],
+   [
+    "france",
+    11
+   ],
+   [
+    "brazil",
+    10
+   ],
+   [
+    "congo-dr",
+    9
+   ],
+   [
+    "germany",
+    9
+   ],
+   [
+    "austria",
+    8
+   ],
+   [
+    "serbia",
+    8
+   ]
+  ],
+  "degree_note": "China = 15 here because Hong Kong is a separate entity (14 sovereign neighbours, matching Factbook \"China and Russia each border 14 other countries\"). Russia = 14. France = 11 (8 metropolitan + Brazil, Suriname via French Guiana + Netherlands via Saint Martin).",
+  "single_neighbour_entities": [
+   "brunei",
+   "cyprus",
+   "denmark",
+   "dominican-republic",
+   "gambia",
+   "greenland",
+   "haiti",
+   "hong-kong",
+   "ireland",
+   "lesotho",
+   "monaco",
+   "papua-new-guinea",
+   "portugal",
+   "qatar",
+   "san-marino",
+   "south-korea",
+   "timor-leste",
+   "vatican-city"
+  ],
+  "islands_count": 43,
+  "components_count": 2,
+  "components": [
+   {
+    "size": 158,
+    "members": "all other bordered entities (Afro-Eurasia + Americas joined via France–Brazil/Suriname, UK–Spain, UK–Cyprus, Spain–Morocco)"
+   },
+   {
+    "size": 2,
+    "members": [
+     "dominican-republic",
+     "haiti"
+    ]
+   }
+  ],
+  "longest_edge": [
+   "canada",
+   "united-states",
+   8891.0
+  ],
+  "shortest_edge": [
+   "botswana",
+   "zambia",
+   0.15
+  ],
+  "factbook_total_mismatches_gt5pct": [
+   {
+    "id": "united-kingdom",
+    "factbook_total_km": 499.0,
+    "edge_sum_km": 656.2
+   },
+   {
+    "id": "greenland",
+    "factbook_total_km": 0.0,
+    "edge_sum_km": 1.3
+   },
+   {
+    "id": "cuba",
+    "factbook_total_km": 28.5,
+    "edge_sum_km": 0.0
+   }
+  ],
+  "factbook_total_mismatch_explanations": {
+   "united-kingdom": "Factbook UK total (499) covers Ireland only; Gibraltar (1.2) and Akrotiri/Dhekelia (156) are separate Factbook entries.",
+   "greenland": "Factbook Greenland entry not updated for the 2022 Hans Island split (Canada & Denmark entries carry 1.3 km).",
+   "cuba": "Factbook counts the 28.5 km Guantanamo Bay naval base perimeter; it is leased US-administered territory that Factbook itself says remains part of Cuba, so no Cuba–US edge."
+  },
+  "topology_crosscheck_vs_wikipedia": {
+   "pairs_in_factbook_not_wikipedia": [
+    "mauritania–morocco (Wikipedia routes it via Western Sahara as a separate territory; kept here as disputed/via Western Sahara)"
+   ],
+   "pairs_in_wikipedia_not_factbook": [
+    "afghanistan–india 106 km (India's de jure claim through Pakistan-administered Gilgit-Baltistan; no de facto contact — excluded)",
+    "bahrain–saudi-arabia 196 m (Passport Island on King Fahd Causeway — typed bridge-or-tunnel-only; Factbook Bahrain 0 km)",
+    "cuba–united-states 29 km (Guantanamo — excluded, see above)"
+   ],
+   "all_other_pairs_agree": true
+  },
+  "km_crosscheck_vs_wikipedia": {
+   "pairs_compared": 321,
+   "pairs_differing_gt15pct": [
+    "afghanistan–china: Factbook 91.0 vs Wikipedia 76.0",
+    "albania–greece: Factbook 212.0 vs Wikipedia 282.0",
+    "albania–north-macedonia: Factbook 181.0 vs Wikipedia 151.0",
+    "algeria–morocco: Factbook 1941.0 vs Wikipedia 1559.0",
+    "argentina–chile: Factbook 6691.0 vs Wikipedia 5300.0",
+    "argentina–paraguay: Factbook 2531.0 vs Wikipedia 1880.0",
+    "armenia–azerbaijan: Factbook 996.0 vs Wikipedia 787.0",
+    "armenia–georgia: Factbook 219.0 vs Wikipedia 164.0",
+    "armenia–iran: Factbook 44.0 vs Wikipedia 35.0",
+    "azerbaijan–georgia: Factbook 428.0 vs Wikipedia 322.0",
+    "azerbaijan–iran: Factbook 689.0 vs Wikipedia 432.0",
+    "azerbaijan–russia: Factbook 338.0 vs Wikipedia 284.0",
+    "azerbaijan–turkey: Factbook 17.0 vs Wikipedia 9.0",
+    "bangladesh–myanmar: Factbook 271.0 vs Wikipedia 193.0",
+    "belarus–lithuania: Factbook 640.0 vs Wikipedia 502.0",
+    "belarus–russia: Factbook 1312.0 vs Wikipedia 959.0",
+    "belarus–ukraine: Factbook 1111.0 vs Wikipedia 891.0",
+    "belgium–germany: Factbook 133.0 vs Wikipedia 167.0",
+    "benin–burkina-faso: Factbook 386.0 vs Wikipedia 306.0",
+    "bolivia–peru: Factbook 1212.0 vs Wikipedia 900.0",
+    "brunei–malaysia: Factbook 266.0 vs Wikipedia 381.0",
+    "burkina-faso–mali: Factbook 1325.0 vs Wikipedia 1000.0",
+    "burundi–tanzania: Factbook 589.0 vs Wikipedia 451.0",
+    "central-african-republic–chad: Factbook 1556.0 vs Wikipedia 1197.0",
+    "central-african-republic–south-sudan: Factbook 1055.0 vs Wikipedia 682.0",
+    "central-african-republic–sudan: Factbook 174.0 vs Wikipedia 483.0",
+    "china–india: Factbook 2659.0 vs Wikipedia 3488.0",
+    "china–kyrgyzstan: Factbook 1063.0 vs Wikipedia 858.0",
+    "china–pakistan: Factbook 438.0 vs Wikipedia 596.0",
+    "colombia–ecuador: Factbook 708.0 vs Wikipedia 590.0",
+    "colombia–panama: Factbook 339.0 vs Wikipedia 225.0",
+    "congo-dr–congo-republic: Factbook 1775.0 vs Wikipedia 2410.0",
+    "congo-dr–zambia: Factbook 2332.0 vs Wikipedia 1930.0",
+    "congo-republic–gabon: Factbook 2567.0 vs Wikipedia 1903.0",
+    "croatia–montenegro: Factbook 19.0 vs Wikipedia 25.0",
+    "croatia–serbia: Factbook 314.0 vs Wikipedia 241.0",
+    "denmark–germany: Factbook 140.0 vs Wikipedia 68.0",
+    "egypt–israel: Factbook 208.0 vs Wikipedia 266.0",
+    "ethiopia–south-sudan: Factbook 1299.0 vs Wikipedia 883.0",
+    "france–monaco: Factbook 6.0 vs Wikipedia 4.4",
+    "ghana–togo: Factbook 1098.0 vs Wikipedia 877.0",
+    "guinea–ivory-coast: Factbook 816.0 vs Wikipedia 610.0",
+    "guinea–mali: Factbook 1062.0 vs Wikipedia 858.0",
+    "guinea–sierra-leone: Factbook 794.0 vs Wikipedia 652.0",
+    "guyana–suriname: Factbook 836.0 vs Wikipedia 600.0",
+    "hungary–ukraine: Factbook 128.0 vs Wikipedia 103.0",
+    "israel–jordan: Factbook 307 vs Wikipedia 238.0",
+    "kenya–south-sudan: Factbook 317.0 vs Wikipedia 232.0",
+    "kyrgyzstan–uzbekistan: Factbook 1314.0 vs Wikipedia 1099.0",
+    "latvia–lithuania: Factbook 544.0 vs Wikipedia 453.0",
+    "latvia–russia: Factbook 332.0 vs Wikipedia 217.0",
+    "lesotho–south-africa: Factbook 1106.0 vs Wikipedia 909.0",
+    "moldova–romania: Factbook 683.0 vs Wikipedia 450.0",
+    "moldova–ukraine: Factbook 1202.0 vs Wikipedia 939.0",
+    "montenegro–serbia: Factbook 157.0 vs Wikipedia 124.0",
+    "north-macedonia–serbia: Factbook 101.0 vs Wikipedia 62.0",
+    "oman–united-arab-emirates: Factbook 609.0 vs Wikipedia 410.0",
+    "qatar–saudi-arabia: Factbook 87.0 vs Wikipedia 60.0",
+    "russia–ukraine: Factbook 1944.0 vs Wikipedia 1576.0"
+   ],
+   "note": "Wikipedia figures are systematically different (different, unstated measurement source); Factbook kept as primary. Palestine pairs were omitted because Wikipedia splits them into Gaza and West Bank rows, so they are not comparable. Denmark–Germany: Wikipedia's 68 km is a straight-line figure, versus 140 km in the Factbook."
+  },
+  "source_disagreements_resolved": [
+   "germany–poland: Factbook Germany 447 vs Poland 467 vs Wikipedia 456 vs 1951 delimitation 460.4 → 467 (Poland entry), flagged ±10 km",
+   "united-states–mexico: Factbook 3,111 (US) vs 3,155 (Mexico) vs Wikipedia 3,141 → IBWC 3,145 km (1,954 mi)",
+   "israel–jordan: Factbook Israel 327 (incl. 20 km in Dead Sea, inconsistent with its own total) vs Jordan 307 → 307",
+   "ireland: Factbook total 490 but lists UK 499 → 499",
+   "canada–greenland: Factbook Greenland 0 km vs Canada/Denmark 1.3 km → 1.3 (2022 agreement)",
+   "france–netherlands (Saint Martin): Factbook 16 km vs Wikipedia 10.2 km → 16 (Factbook), flagged",
+   "Peñón de Vélez: Factbook & Wikipedia list 75 m, Wikipedia article and press 85 m (also 80/81 m) → 75 m used inside morocco–spain km",
+   "denmark–canada in Factbook reassigned to greenland–canada (Greenland is its own entity)",
+   "Morocco–Mauritania: Factbook attributes the Western Sahara line to Morocco; typed disputed, via Western Sahara",
+   "Algeria–Morocco excludes 41 km Algeria–Western Sahara segment (not attributed to any listed entity)",
+   "Hong Kong–China 33 km (Factbook) vs 30 km (Wikipedia) → 33",
+   "Serbia–Albania: Serbia claims a border via Kosovo; no de facto boundary → no edge"
+  ],
+  "components_note": "With via-territory edges included, the Americas join Afro-Eurasia through French Guiana and Saint Martin, and Ireland–UK, Cyprus, Indonesia/PNG/Timor-Leste/Brunei/Malaysia all join as well, because entities are nodes and not landmasses. Malaysia connects Borneo to the mainland. The contiguous variant below uses only land and disputed edges.",
+  "components_contiguous_only": [
+   {
+    "size": 132,
+    "members": [
+     "afghanistan",
+     "albania",
+     "algeria",
+     "..."
+    ]
+   },
+   {
+    "size": 23,
+    "members": [
+     "argentina",
+     "belize",
+     "bolivia",
+     "..."
+    ]
+   },
+   {
+    "size": 2,
+    "members": [
+     "ireland",
+     "united-kingdom"
+    ]
+   },
+   {
+    "size": 2,
+    "members": [
+     "dominican-republic",
+     "haiti"
+    ]
+   }
+  ],
+  "components_contiguous_only_count": 4,
+  "anomaly_count": 45,
+  "not_verified": [
+   "Hans Island agreement entry-into-force date (signing on 14 Jun 2022 is confirmed)",
+   "Exact Germany–Poland length (sources range 447–467 km)",
+   "Saint Martin boundary length (16 vs 10.2 km)",
+   "Peñón border length (75–85 m)",
+   "Areas quoted in anomalies (Madha, Büsingen, Campione, Llívia, Bir Tawil) come from Wikipedia articles and were not re-fetched in this run"
+  ]
+ }
+}

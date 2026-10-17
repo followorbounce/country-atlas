@@ -46,6 +46,37 @@
     <div class="scale-strip" id="scaleStrip"></div>
   </div>
 
+  <div class="wrap">
+    <section class="borders" id="borders" aria-labelledby="bordersTitle">
+      <div class="category-head"><h2 id="bordersTitle">Borders &amp; Neighbours</h2></div>
+      <p class="category-sub">Every country and territory as a flag, joined by a line to each neighbour it shares a land border with.</p>
+      <div class="b-stats" id="borderStats"></div>
+      <div class="b-bar">
+        <p class="b-how">Click a flag to see its neighbours. It stays selected until you click another flag.</p>
+        <div class="b-zoom" role="group" aria-label="Zoom">
+          <button class="chip bz-out" aria-label="Zoom out">−</button><button class="chip bz-in" aria-label="Zoom in">+</button><button class="chip bz-reset">Whole map</button>
+        </div>
+      </div>
+      <div class="b-main">
+        <div class="b-frame">
+          <svg id="borderGraph" viewBox="0 0 1200 640" role="img" aria-label="Graph of land borders between countries, laid out roughly by geography. A full text list follows below."></svg>
+        </div>
+        <aside class="b-panel" id="borderPanel" aria-live="polite"></aside>
+      </div>
+      <div class="b-legend" aria-hidden="true">
+        <span><svg viewBox="0 0 34 10"><path d="M2,5 L32,5" class="be be-land"/></svg>Land border</span>
+        <span><svg viewBox="0 0 34 10"><path d="M2,5 L32,5" class="be be-via-territory"/></svg>Through an overseas territory or exclave</span>
+        <span><svg viewBox="0 0 34 10"><path d="M2,5 L32,5" class="be be-disputed"/></svg>Disputed</span>
+      </div>
+      <div class="b-route" id="borderRoute" aria-live="polite"></div>
+      <h3 class="b-h3">Territorial anomalies</h3>
+      <p class="b-how">Click one to see where it is and why it is unusual.</p>
+      <div id="borderAnomalies"></div>
+      <details class="b-list" id="borderList"><summary>All land borders as a list</summary></details>
+      <p class="viz-caption" id="borderSource">Borders and lengths: CIA World Factbook "Land boundaries" (January 2026 edition, its last), cross-checked against Wikipedia's list of countries by number of land borders; where the two disagree the Factbook figure is used and the choice is noted. Bridge- and tunnel-only links (Channel Tunnel, Øresund, Johor and King Fahd causeways) are not land borders and are not drawn. Positions are approximate centres (Google DSPL), nudged apart for legibility. Flags: <a href="https://github.com/lipis/flag-icons">flag-icons</a> (MIT).</p>
+    </section>
+  </div>
+
   <div class="wrap" id="categoryPanels"></div>
 
   <div class="wrap">
@@ -116,6 +147,8 @@
 <script src="js/viz/radar.js"></script>
 <script src="js/viz/pyramid.js"></script>
 <script src="js/viz/growth.js"></script>
+<script src="js/data/borders.js"></script>
+<script src="js/viz/borders.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

@@ -297,3 +297,100 @@ footer a { color: var(--accent-green); }
   .stat-val { font-size: 0.8rem; }
   .stat-row td { padding: 10px 6px; }
 }
+
+/* ---------- Borders & Neighbours (border graph, js/viz/borders.js) ---------- */
+.borders { padding: 8px 0 40px; }
+.b-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin: 14px 0; }
+.bs-cell { background: var(--panel); padding: 10px 14px; display: flex; flex-direction: column; min-width: 0; }
+.bs-cell b { font-family: var(--font-mono); font-size: 1.35rem; color: var(--ink); }
+.bs-cell span { font-size: 0.76rem; color: var(--ink-dim); }
+.b-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px; margin-bottom: 10px; }
+.b-bar .chip-row { margin-bottom: 0; align-items: center; }
+.b-bar-k { font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-dim); margin-right: 4px; }
+.b-zoom { display: flex; align-items: center; gap: 6px; }
+.b-zoom .chip { min-width: 44px; min-height: 36px; }
+.bz-k { font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-dim); min-width: 42px; text-align: center; }
+.b-main { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 16px; align-items: start; }
+.b-frame { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+#borderGraph { display: block; width: 100%; height: auto; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.be { fill: none; stroke: var(--ink-dim); stroke-opacity: 0.55; stroke-linecap: round; transition: stroke-opacity .15s; }
+.be-via-territory { stroke-dasharray: 5 4; }
+.be-disputed { stroke-dasharray: 1.2 3.4; stroke: var(--accent-warn); stroke-opacity: 0.8; }
+.be.hot { stroke: var(--ink); stroke-opacity: 1; }
+.be.dim { stroke-opacity: 0.12; }
+.be-route { fill: none; stroke: var(--accent-green); stroke-width: 4; stroke-linecap: round; stroke-opacity: 0.85; pointer-events: none; }
+.bn { transition: opacity .15s; }
+.bn.dim { opacity: 0.22; }
+.bn-ring { fill: var(--panel-alt); stroke: var(--ink-dim); stroke-width: 0.8; }
+.bn.is-focus .bn-ring { stroke: var(--ink); stroke-width: 2.4; }
+.bn.is-a .bn-ring { stroke: var(--side-a); stroke-width: 3.4; }
+.bn.is-b .bn-ring { stroke: var(--side-b); stroke-width: 3.4; }
+.bn-label { font-family: var(--font-mono); font-size: 9px; text-anchor: middle; fill: var(--ink-dim); paint-order: stroke; stroke: var(--panel); stroke-width: 3px; pointer-events: none; }
+.b-panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; box-shadow: var(--shadow); font-size: 0.86rem; max-height: 560px; overflow: auto; }
+.b-panel h4 { font-family: var(--font-display); font-size: 1.05rem; margin: 0 0 6px; }
+.b-panel p { margin: 0 0 10px; color: var(--ink-dim); }
+.bp-head { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+.bp-head h4 { margin: 0; }
+.bp-flag { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); }
+.bp-kind { font-family: var(--font-mono); font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-green); margin-bottom: 4px; }
+.bp-list { list-style: none; margin: 0 0 10px; padding: 0; }
+.bp-list li { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; padding: 5px 0; border-top: 1px solid var(--line); }
+.bp-km { font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-dim); margin-left: auto; }
+.bp-tag { flex-basis: 100%; font-size: 0.72rem; color: var(--ink-dim); padding-left: 26px; }
+.bp-n { display: inline-flex; align-items: center; gap: 6px; background: none; border: 0; padding: 4px 0; min-height: 32px; font: inherit; color: var(--ink); cursor: pointer; text-align: left; }
+.bp-n:hover { text-decoration: underline; }
+.bp-n img, .br-stop img { width: 18px; height: 18px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); flex-shrink: 0; }
+.bp-ents { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-bottom: 8px; }
+.bp-src { font-size: 0.74rem; }
+.bp-pick { display: flex; gap: 8px; }
+.bp-side { flex: 1; min-height: 44px; border-radius: var(--radius); font: inherit; font-weight: 600; font-size: 0.8rem; cursor: pointer; background: var(--panel); }
+.bp-side.a { border: 2px solid var(--side-a); color: var(--side-a); }
+.bp-side.b { border: 2px solid var(--side-b); color: var(--side-b); }
+.bl-legend { display: flex; flex-direction: column; gap: 4px; }
+.bl-item { display: flex; align-items: center; gap: 8px; background: none; border: 1px solid transparent; border-radius: var(--radius); padding: 6px 6px; min-height: 36px; font: inherit; font-size: 0.8rem; color: var(--ink); cursor: pointer; text-align: left; }
+.bl-item:not(.on) { opacity: 0.45; text-decoration: line-through; }
+.bl-item svg { width: 34px; height: 10px; flex-shrink: 0; }
+.bl-item .be { stroke-width: 2; }
+.b-route { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 14px 0 6px; font-size: 0.88rem; min-height: 44px; }
+.br-k { font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-green); }
+.br-t { color: var(--ink-dim); }
+.br-chain { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.br-stop { display: inline-flex; align-items: center; gap: 5px; background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px 3px 4px; min-height: 32px; font: inherit; font-size: 0.82rem; color: var(--ink); cursor: pointer; }
+.br-stop.a { border-color: var(--side-a); }
+.br-stop.b { border-color: var(--side-b); }
+.br-arrow { color: var(--ink-dim); }
+.br-n { font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-dim); }
+.b-h3 { font-family: var(--font-display); font-size: 1rem; margin: 22px 0 10px; }
+.ba-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.ba-chip { background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; min-height: 36px; font: inherit; font-size: 0.8rem; color: var(--ink); cursor: pointer; }
+.ba-chip:hover { border-color: var(--ink-dim); }
+.ba-chip.on { background: var(--ink); color: var(--panel); border-color: var(--ink); }
+.b-list { margin-top: 18px; }
+.b-list summary { cursor: pointer; font-weight: 600; min-height: 44px; display: flex; align-items: center; }
+.bt { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+.bt th { text-align: left; font-family: var(--font-mono); font-size: 0.66rem; text-transform: uppercase; color: var(--ink-dim); padding: 6px 8px; border-bottom: 1px solid var(--line); }
+.bt td { padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.bt-c { font-family: var(--font-mono); text-align: center; }
+.bt-n { background: none; border: 0; padding: 0; font: inherit; font-weight: 600; color: var(--side-a); cursor: pointer; text-align: left; }
+@media (max-width: 900px) {
+  .b-main { grid-template-columns: minmax(0, 1fr); }
+  .b-panel { max-height: none; }
+}
+@media (max-width: 640px) {
+  .b-stats { grid-template-columns: 1fr 1fr; }
+  .bt th:nth-child(2), .bt td:nth-child(2) { display: none; }
+}
+/* Shared chip buttons (also used by the Growth Over Time toggles, which had no style before). */
+.chip-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; min-height: 36px; font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; color: var(--ink); cursor: pointer; }
+.chip:hover { border-color: var(--ink-dim); }
+.chip.active { background: var(--ink); color: var(--panel); border-color: var(--ink); }
+.b-how { margin: 0; font-size: 0.86rem; color: var(--ink-dim); }
+.b-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 8px; font-size: 0.78rem; color: var(--ink-dim); }
+.b-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.b-legend svg { width: 34px; height: 10px; }
+.b-legend .be { stroke-width: 2; }
+.bp-head { justify-content: space-between; }
+.bp-head h4 { flex: 1; }
+.bp-close { background: none; border: 1px solid var(--line); border-radius: 50%; width: 36px; height: 36px; font-size: 1.1rem; line-height: 1; color: var(--ink-dim); cursor: pointer; flex-shrink: 0; }
+.bp-close:hover { color: var(--ink); border-color: var(--ink-dim); }
