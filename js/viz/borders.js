@@ -45,7 +45,8 @@ const BordersViz = (() => {
     return n;
   };
   const nameOf = (id) => (byId[id] ? byId[id].name : id);
-  const flagUrl = (id) => "assets/flags/" + (Borders.iso[id] || "xx").toLowerCase() + ".svg";
+  let base = "";
+  const flagUrl = (id) => base + "assets/flags/" + (Borders.iso[id] || "xx").toLowerCase() + ".svg";
   const fmtKm = (km) => (km == null ? "length n/a" : km < 1 ? Math.round(km * 1000) + " m" : Math.round(km).toLocaleString("en-US") + " km");
 
   /* ---------- geometry ---------- */
@@ -154,6 +155,7 @@ const BordersViz = (() => {
 
   function drawRoute() {
     gRoute.textContent = "";
+    if (!routeBox) return;
     routeBox.textContent = "";
     if (!sideA || !sideB || !byId[sideA] || !byId[sideB]) return;
     const lab = h("span", "br-k", "Land route between Side A and Side B");
@@ -407,10 +409,14 @@ const BordersViz = (() => {
   }
 
   /* ---------- public ---------- */
+  /* opts: { select(side, id) } on the atlas page; { root, base } when embedded elsewhere (the homepage
+     passes base "/country-atlas/" and has no A/B sides, route strip or text list). */
   function init(opts) {
-    root = document.getElementById("borders");
+    opts = opts || {};
+    root = typeof opts.root === "string" ? document.getElementById(opts.root) : opts.root || document.getElementById("borders");
     if (!root || typeof Borders === "undefined") return;
-    api = opts || null;
+    api = opts.select ? opts : null;
+    base = opts.base || "";
     svg = root.querySelector("#borderGraph");
     panel = root.querySelector("#borderPanel");
     routeBox = root.querySelector("#borderRoute");
@@ -418,7 +424,8 @@ const BordersViz = (() => {
     anomBox = root.querySelector("#borderAnomalies");
     listBox = root.querySelector("#borderList");
 
-    const ents = typeof Countries !== "undefined" ? Countries : [];
+    const ents = typeof Countries !== "undefined" ? Countries
+      : Object.keys(Borders.ents || {}).map((id) => ({ id, name: Borders.ents[id][0], geography: { totalAreaKm2: Borders.ents[id][1] } }));
     nodes = ents.filter((c) => Borders.pos[c.id]).map((c) => {
       const [hx, hy] = project(Borders.pos[c.id][0], Borders.pos[c.id][1]);
       return { id: c.id, name: c.name, hx, hy, area: c.geography?.totalAreaKm2, pop: c.population?.total };
@@ -444,7 +451,7 @@ const BordersViz = (() => {
     root.querySelector(".bz-reset").addEventListener("click", () => { view = { x: 0, y: 0, k: 1 }; applyView(); });
 
     layout(); draw(); applyView(); wirePointer();
-    buildStats(); buildAnomalies(); buildList(); showOverview();
+    buildStats(); buildAnomalies(); if (listBox) buildList(); showOverview();
   }
 
   function update(a, b) { sideA = a; sideB = b; if (svg && nodes.length) paint(); }
