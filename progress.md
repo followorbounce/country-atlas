@@ -742,3 +742,6 @@ bulk-source hunt — there isn't a bulk source left to find for
 
 ## 2026-10-16 — Index infrastructure
 - added missing canonical URL, description where absent, Open Graph and twitter:card tags. The host-level robots.txt / sitemap index / llms.txt live in followorbounce.github.io.
+
+## 2026-10-28 — Reach plan F4: structured data
+Dataset JSON-LD: 203 entities, 63 variables, sources; licence not stated (owner to decide).
