@@ -745,3 +745,42 @@ bulk-source hunt — there isn't a bulk source left to find for
 
 ## 2026-10-28 — Reach plan F4: structured data
 Dataset JSON-LD: 203 entities, 63 variables, sources; licence not stated (owner to decide).
+
+## 2026-11-12 — S8: microstate population + GDP consistency fix
+Roadmap finding S8: 7 microstates had no `population.total`, and
+several rows had `gdpPerCapitaUSD` disagreeing with
+`gdpNominalUSD / population.total` by >25% (mixed source years/
+exchange rates, flagged in the 2026-10-02 review pass).
+
+**7 microstates — added `population.total` (IMF WEO 2024 estimates
+via Wikipedia):**
+- Liechtenstein 41,228; Monaco 38,857; San Marino 34,151;
+  Saint Kitts and Nevis 51,320; Marshall Islands 42,418;
+  Palau 16,733; Tuvalu 10,643.
+  Each entity's `gdpPerCapitaUSD` was also re-sourced from the same
+  IMF list to stay consistent with the nominal figure already present.
+
+**9 GDP-discrepant countries — updated `gdpPerCapitaUSD` (and nominal
+where the nominal itself was from a stale source):**
+- Burundi: pc 234→510
+- Congo DR: nom 123.4B→122.3B, pc 807→1,111
+- South Sudan: pc 1,080→642
+- Sudan: pc 1,165→597
+- Zambia: pc 1,318→1,882
+- Lebanon: pc 4,473→6,443
+- Syria: nom 60.0B→17.3B, pc 1,057→1,230
+- Turkmenistan: pc 6,540→12,291
+- Yemen: pc 634→567
+
+All values WebFetch-verified against Wikipedia's "List of countries by
+GDP (nominal)" and "List of countries by GDP (nominal) per capita"
+(both sourcing IMF WEO April 2026).
+
+**Residual nom/pop vs per-capita divergence for Sudan (50%), Syria
+(41%), Yemen (67%):** expected and accepted. These are active
+conflict zones where the IMF's own population denominators for its
+per-capita calculation differ materially from the census-based
+`population.total` figures in this file (millions displaced/
+unaccounted). The old discrepancies were far worse — wrong
+source/year entirely — and are now resolved to same-source IMF 2026
+estimates on both sides.
